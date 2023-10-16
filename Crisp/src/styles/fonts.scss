@@ -1,0 +1,15 @@
+$-font-default-name: "Barlow Semi CondensedLight";
+$font-default: $-font-default-name, sans-serif;
+
+$-font-header-name: "Barlow Semi CondensedSemi Bold";
+$font-header: $-font-header-name, sans-serif;
+
+@font-face {
+  font-family: $-font-default-name;
+  src: url("./fonts/Barlow-Light.ttf");
+}
+
+@font-face {
+  font-family: $-font-header-name;
+  src: url("./fonts/Barlow-SemiBold.ttf");
+}

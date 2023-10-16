@@ -1,0 +1,22 @@
+/*
+ * To use the colours in this file,
+  * see https://foresttechnologies.atlassian.net/wiki/spaces/DT/pages/4424957972/Styling+Best+Practices#Colours
+  * and https://blog.magmalabs.io/2018/04/17/nice-way-handle-sass-color-variables.html
+  * also https://chir.ag/projects/name-that-color/
+ */
+
+/*
+ * Base colours. DO NOT use these variables outside this file.
+ * Only use the component variables below, or create your own semantic variable
+ */
+ $-white: #ffffff;
+ $-black: #000000;
+ $-dim-green: #2C6566;
+ $-light-green: #449342;
+ $-ocean: #C1F6ED;
+ /*
+  * Components. Only use the values that semantically makes sense for your element, or make a new name.
+  * Try to match the naming convention to explain how the colour is used
+  * $[location]-[variant]-[style property]
+  */
+ $application-background: $-dim-green;

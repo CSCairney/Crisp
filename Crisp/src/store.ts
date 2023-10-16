@@ -1,12 +1,14 @@
 import { configureStore} from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import teamReducer from "../src/modules/team/store";
+import userReducer from "../src/modules/login/store";
 
 export function createStore(preloadedState = {}) {
     return configureStore({
             preloadedState,
             reducer: {
-                teamState: teamReducer
+                teamState: teamReducer,
+                userState: userReducer
             }
         }
     )

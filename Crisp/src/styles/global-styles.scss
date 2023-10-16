@@ -1,0 +1,31 @@
+@use "fonts";
+@use "colors";
+// this file is for fully global styles _only_
+// unless you expect it to be truly needed everywhere, put the styles local to the element
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: fonts.$font-default;
+  background-color: colors.$application-background;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+button {
+  font-family: fonts.$font-header;
+}
+
+a:link {
+  text-decoration: none;
+}

@@ -6,10 +6,10 @@ const teamSlice = createSlice({
     initialState: createInitialTeamState(),
     reducers: {
         getTeam: (state) => {
-            state.team
+            state.info.team
         },
         getContactInformation: (state) => {
-            state.contact
+            state.info.contact
         }
     }
 })

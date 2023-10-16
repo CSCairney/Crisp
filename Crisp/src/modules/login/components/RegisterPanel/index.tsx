@@ -14,18 +14,20 @@ const RegisterPanel:React.FC = () => {
 
     return (
         <>
-      {activePanel === authenticationViewMode.REGISTER ? <PanelContainer panelType={authenticationViewMode.REGISTER} activePanel={activePanel}>
+      {activePanel === "REGISTER" ? <PanelContainer>
         <div className='register-panel__container'>
           <h1 className='register-panel__title'>Register Panel</h1>
           <form className='register-panel__form' onSubmit={handleRegister}>
             <input type='text' placeholder='Username' className='register-panel__input' />
+            <input type="email" placeholder='Email' className='register-panel__input' />
             <input type='password' placeholder='Password' className='register-panel__input' />
+            <input type='password' placeholder='Confirm Password' className='register-panel__input' />
             <button type='submit' className='register-panel__submit'>
               Login
             </button>
           </form>
         </div>
-      </PanelContainer> : <PanelToggle type={authenticationViewMode.LOGIN} content="Login Panel" />}
+      </PanelContainer> : <PanelToggle type={authenticationViewMode.REGISTER} content="Register Panel" />}
     </>
     )
 }

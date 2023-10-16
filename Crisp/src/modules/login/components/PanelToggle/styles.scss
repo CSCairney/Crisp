@@ -1,11 +1,11 @@
 @use "src/styles/colors";
 
-.panel-container {
+.panel-toggle {
     display: grid;
     height: 100%;
     width: 100%;
     grid-template-columns: 1fr;
     place-items: center;
     align-items: center;
-    background: colors.$login-panel-background;
+    background: none;
 }

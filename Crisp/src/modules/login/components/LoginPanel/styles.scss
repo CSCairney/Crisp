@@ -1,0 +1,22 @@
+.login-panel {
+    &__container {
+        height: 60%;
+        width: 80%;
+        display: grid;
+        grid-template-rows: 10% 90%;
+    }
+    &__form {
+        height: 50%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 2fr;
+        gap: 10px;
+    }
+    &__input {
+        height: 50px;
+    }
+    &__title {
+        place-self: center;
+        margin-bottom: 20px;
+    }
+}

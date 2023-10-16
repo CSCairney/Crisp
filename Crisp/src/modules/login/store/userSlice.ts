@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { createInitialUserState } from "./userState";
+import { authenticationViewMode } from "../contants/login";
 
 const teamSlice = createSlice({
     name: "userState",
@@ -16,6 +17,9 @@ const teamSlice = createSlice({
         getUsers: (state) => {
             state.users;
         },
+        setViewMode: (state, action: PayloadAction<authenticationViewMode>) => {
+           state.viewMode = action.payload;
+        }
     }
 })
 

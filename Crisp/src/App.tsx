@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import { Suspense } from 'react'
 import Loader from './modules/common/components/Loader'
+import Login from './pages/Login'
 
 
 // TODO - Create a loader for APP suspense
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.ABOUT} element={<About />} />
+        <Route path={ROUTES.LOGIN} element={<Login />} />
       </Routes>
     </Suspense>
     </>

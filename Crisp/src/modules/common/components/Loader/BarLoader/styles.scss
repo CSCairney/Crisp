@@ -1,0 +1,30 @@
+@use "src/styles/colors";
+
+.loader_bar {
+  height: 4px;
+  width: 130px;
+  background: linear-gradient(colors.$loader-foreground-alt 0 0),
+    linear-gradient(colors.$loader-foreground-alt 0 0),
+    colors.$loader-background;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  animation: sliding 3s infinite;
+}
+
+@keyframes sliding {
+  0% {
+    background-position:
+      -150% 0,
+      -150% 0;
+  }
+  66% {
+    background-position:
+      250% 0,
+      -150% 0;
+  }
+  100% {
+    background-position:
+      250% 0,
+      250% 0;
+  }
+}

@@ -16,7 +16,7 @@ const LoginPanel: React.FC = () => {
   return (
     <>
       {activePanel === "LOGIN" ? (
-        <PanelContainer>
+        <PanelContainer position="left">
           <div className='login-panel__container'>
             <h1 className='login-panel__title'>Login Panel</h1>
             <form className='login-panel__form' onSubmit={handleSubmit}>

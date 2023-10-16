@@ -8,4 +8,13 @@
     place-items: center;
     align-items: center;
     background: colors.$login-panel-background;
+    -webkit-box-shadow: inset 0px 0px 31px -11px black;
+    -moz-box-shadow: inset 0px 0px 31px -11px black;
+    box-shadow: inset 0px 0px 31px -11px black;
+    &--right {
+        border-radius: 25px 0 0 25px;
+    }
+    &--left {
+        border-radius: 0 25px 25px 0;
+    }
 }

@@ -1,3 +1,5 @@
+@use "src/styles/colors";
+
 .register-panel {
     &__container {
         height: 60%;
@@ -18,5 +20,31 @@
     &__title {
         place-self: center;
         margin-bottom: 20px;
+    }
+
+    &__submit {
+        display: inline-block;
+        outline: none;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 1;
+        border-radius: 5px;
+        transition-property: background-color,border-color,color,box-shadow,filter;
+        transition-duration: .3s;
+        border: 1px solid transparent;
+        letter-spacing: 2px;
+        min-width: 160px;
+        text-transform: uppercase;
+        white-space: normal;
+        font-weight: 700;
+        text-align: center;
+        padding: 17px 48px;
+        color: colors.$button-primary-text;
+        background-color: colors.$button-primary-background;
+        height: 48px;
+        :hover{
+            transform: scale(1.04);
+            background-color: colors.$button-primary-hover;
+        }
     }
 }

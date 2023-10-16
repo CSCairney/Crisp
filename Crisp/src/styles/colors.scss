@@ -9,14 +9,20 @@
  * Base colours. DO NOT use these variables outside this file.
  * Only use the component variables below, or create your own semantic variable
  */
- $-white: #ffffff;
- $-black: #000000;
- $-dim-green: #2C6566;
- $-light-green: #449342;
- $-ocean: #C1F6ED;
- /*
+$-white: #ffffff;
+$-black: #000000;
+$-dim-green: #2C6566;
+$-light-green: #449342;
+$-ocean: #C1F6ED;
+/*
   * Components. Only use the values that semantically makes sense for your element, or make a new name.
   * Try to match the naming convention to explain how the colour is used
   * $[location]-[variant]-[style property]
   */
- $application-background: $-dim-green;
+$application-background: $-dim-green;
+
+$loader-container: $-black;
+$loader-background: $-dim-green;
+$loader-foreground: $-white;
+$loader-foreground-alt: $-light-green;
+$loader-text: $-white;

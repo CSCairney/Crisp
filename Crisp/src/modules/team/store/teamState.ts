@@ -1,9 +1,15 @@
-export function createInitialTeamState() {
+import { TeamState } from "../types/team";
+
+export function createInitialTeamState(): TeamState {
     return {
-        contact: {
-            mobile: "07375368313",
-            landline: "07925906671"
-        },
-        team: 0
-    }
+        isLoading: false,
+        errorMessage: "",
+        info: {
+            contact: {
+                mobile: "07375368313",
+                landline: "07925906671"
+            },
+            team: 0
+            }
+}
 }

@@ -1,6 +1,6 @@
 import { TeamState } from "../../src/modules/team/types/team";
 
-export const teamState: TeamState = {
+export const teamMockState: TeamState = {
     isLoading: false,
     errorMessage: "",
     info: {

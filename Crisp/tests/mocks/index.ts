@@ -1,6 +1,8 @@
 import { RootState } from "../../src/store";
-import { teamState } from "./teamState";
+import { teamMockState } from "./teamState";
+import { userMockState } from "./userState";
 
 export const mockStoreData: RootState = {
-    teamState: teamState
+    teamState: teamMockState,
+    userState: userMockState,
 };

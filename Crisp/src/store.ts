@@ -2,6 +2,7 @@ import { configureStore} from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import teamReducer from "../src/modules/team/store";
 import userReducer from "../src/modules/login/store";
+import { listenerMiddleware } from "./modules/common/services/listenersService";
 
 export function createStore(preloadedState = {}) {
     return configureStore({
@@ -9,7 +10,9 @@ export function createStore(preloadedState = {}) {
             reducer: {
                 teamState: teamReducer,
                 userState: userReducer
-            }
+            },
+            middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware().prepend(listenerMiddleware.middleware),
         }
     )
 }

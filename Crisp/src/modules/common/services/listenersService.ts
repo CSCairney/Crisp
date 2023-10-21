@@ -1,7 +1,7 @@
 import { createListenerMiddleware, isAnyOf } from "@reduxjs/toolkit";
 import { settingsPersistenceService } from "../localStorage/persistence";
 import { RootState } from "~/store";
-import { setUser, setUsers, setViewMode } from "~/modules/login/store";
+import { setUser, setUsers, setViewMode } from "../../login/store";
 
 export const listenerMiddleware = createListenerMiddleware();
 

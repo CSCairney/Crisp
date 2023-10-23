@@ -4,8 +4,8 @@ export enum MainRoutes {
 }
 
 export enum SubRoutes {
-    ABOUT = "about",
-    PRODUCTS = "products",
-    BLOG = "blog",
-    CONTACT = "contact",
+    ABOUT = "About",
+    PRODUCTS = "Products",
+    BLOG = "Blog",
+    CONTACT = "Contact",
 }

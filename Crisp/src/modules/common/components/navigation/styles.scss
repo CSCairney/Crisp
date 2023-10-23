@@ -1,5 +1,57 @@
 @use "src/styles/colors";
 
 .navigation {
-    
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    &__logo {
+        height: 30px;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 24px 48px;
+        margin: auto;
+        background-color: colors.$navigation-light-background;
+    }
+
+    &__links-container{
+        display: grid;
+        width: 30%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    &__link {
+        text-align: center;
+        color: colors.$navigation-light-text;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 5px  10px;
+        &:hover {
+            background-color: colors.$navigation-light-background-hover;
+            color: colors.$navigation-light-text-hover;
+        }
+    }
+
+    &__login {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        &--link {
+            background-color:colors.$navigation-light-button;
+            color: colors.$navigation-light-button-text;
+            padding: 5px  10px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            &:hover {
+                background-color: colors.$navigation-light-button-hover;
+            }
+        }
+    }
 }

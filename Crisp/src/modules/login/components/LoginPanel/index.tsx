@@ -13,6 +13,7 @@ const LoginPanel: React.FC = () => {
   const handleSubmit = () => {
     console.log("Submit");
   };
+  // Test
   return (
     <>
       {activePanel === "LOGIN" ? (

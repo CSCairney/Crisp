@@ -31,6 +31,7 @@
       "~/tests/*": ["./tests/*"],
       "~/store": ["./src/store.ts"],
       "~/assets/*": ["./src/assets/*"],
+      "~/modules/*": ["./src/modules/*"],
     }
   },
   "include": ["src"],

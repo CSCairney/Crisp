@@ -7,6 +7,7 @@ import { selectActiveUserInfo } from "../../../../login/store/selectors/login";
 import {BiUserCircle} from "react-icons/bi";
 import Tooltip from "../../Tooltip";
 import UserInfoPopup from "../UserInfoPopup";
+import { TooltipThemes } from "../../../../common/types/tooltip";
 
 const UserArea: React.FC = () => {
   const activeUserStatus = useAppSelector(selectActiveUserInfo);
@@ -21,7 +22,7 @@ const UserArea: React.FC = () => {
 
     return (
         <div className='user-area__login'>
-          <Tooltip isInteractive tooltipContent={<UserInfoPopup user={activeUserStatus} />} >
+          <Tooltip theme={TooltipThemes.Light} isInteractive tooltipContent={<UserInfoPopup user={activeUserStatus} />} >
           <button className='user-area__login--link' onClick={() => setUserVisible(!userVisible)}>
             <BiUserCircle className='user-area__login--icon' />
           </button>

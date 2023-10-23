@@ -1,16 +1,16 @@
 export type mapState = {
     polygons: {
-        isLoading: false,
+        isLoading: boolean,
         error: null,
         data: null,
       },
       markers: {
-        isLoading: false,
+        isLoading: boolean,
         error: null,
         data: null,
       },
       lines: {
-        isLoading: false,
+        isLoading: boolean,
         error: null,
         data: null,
       }

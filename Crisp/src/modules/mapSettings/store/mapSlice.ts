@@ -1,11 +1,17 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { createInitialMapState } from "./mapState";
+import { mapState } from "../types/map";
 
 const mapSlice = createSlice({
     name: "mapState",
     initialState: createInitialMapState(),
     reducers: {
-    setLinesLoading: (state, action) => {
+    setMapState: (state, action: PayloadAction<mapState>) => {
+        state.lines = action.payload.lines;
+        state.markers = action.payload.markers;
+        state.polygons = action.payload.polygons;
+    },
+    setLinesLoading: (state, action: PayloadAction<boolean>) => {
         state.lines.isLoading = action.payload;
     },
     setMarkersLoading: (state, action) => {

@@ -14,7 +14,6 @@ const LoginPanel: React.FC = () => {
   const dispatch = useAppDispatch();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  console.log(activePanel);
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();

@@ -10,7 +10,7 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Navbar from "./modules/common/components/Navbar";
 import { useAppDispatch } from "./store";
-import { getPersistedUserSettings } from "~/login/store/actions/login";
+import { getPersistedUserSettings } from "./modules/login/store/actions/login";
 
 // TODO - Create a loader for APP suspense
 function App() {

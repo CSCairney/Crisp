@@ -1,9 +1,9 @@
 import merge from "lodash/merge";
 
 import { DeepPartial } from "../../../common/types/utils";
-import { authenticationViewMode } from "~/login/contants/login";
-import { userState } from "~/login/types/users";
-import { settingsPersistenceService } from "~/common/localStorage/persistence";
+import { authenticationViewMode } from "../../contants/login";
+import { userState } from "../../types/users";
+import { settingsPersistenceService } from "../../../common/localStorage/persistence";
 
 export function createDefaultUserSettings(): userState {
   return {

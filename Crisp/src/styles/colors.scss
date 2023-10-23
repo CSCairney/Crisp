@@ -41,7 +41,7 @@ $navigation-light-text: $-black;
 $navigation-light-text-hover: $-white;
 $navigation-light-text-active: $-dim-green;
 $navigation-light-button: $-dim-green;
-$navigation-light-button-hover: $-light-green;
+$navigation-light-button-hover: $-black;
 $navigation-light-button-text: $-white;
 
 $tooltip-primary-background: $-light-green;
@@ -50,3 +50,6 @@ $tooltip-secondary-background: $-dim-green;
 $tooltip-secondary-text: $-white;
 $tooltip-warning-background: $-red;
 $tooltip-warning-text: $-white;
+
+$user-info-background: $-white;
+$user-info-text: $-black;

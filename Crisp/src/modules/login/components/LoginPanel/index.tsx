@@ -5,9 +5,8 @@ import "./styles.scss";
 import PanelToggle from "../PanelToggle";
 import { useAppDispatch, useAppSelector } from "../../../../store";
 import { selectLoginViewMode } from "../../store/selectors/login";
-import { authUser } from "../../store";
-import { toast } from "sonner";
 import { useNavigate } from "react-router";
+import { loginUser } from "../../store/actions/login";
 
 const LoginPanel: React.FC = () => {
   const activePanel = useAppSelector(selectLoginViewMode);
@@ -19,13 +18,8 @@ const LoginPanel: React.FC = () => {
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    const userStatus = dispatch(authUser({username: username, password: password}));
-    if (userStatus) {
-      toast.success('Login successful');
+      dispatch(loginUser({ username: username,password: password }));
       navigate('/');
-    } else {
-      toast.error('Invalid username or password');
-    }
   };
   // Test
   return (

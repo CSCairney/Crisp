@@ -10,7 +10,7 @@ listenerMiddleware.startListening({
       setViewMode,
       setUser,
       setUsers,
-      authUser
+      authUser,
     ),
     effect: (_action, listenerApi) => {
       try {

@@ -1,5 +1,5 @@
 import { cleanup, screen } from "@testing-library/react";
-import { renderWithStore } from "~/tests/helpers/render";
+import { renderWithStore } from "../../../../../../tests/helpers/render";
 
 import Loader from "../index";
 

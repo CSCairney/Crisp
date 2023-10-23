@@ -9,6 +9,7 @@
  * Base colours. DO NOT use these variables outside this file.
  * Only use the component variables below, or create your own semantic variable
  */
+$-red: #f70000;
 $-white: #ffffff;
 $-black: #000000;
 $-dim-green: #2C6566;
@@ -33,3 +34,19 @@ $button-primary-text: $-white;
 $button-primary-background: $-light-green;
 $button-primary-border: $-light-green;
 $button-primary-hover: $-ocean;
+
+$navigation-light-background: $-white;
+$navigation-light-background-hover: $-dim-green;
+$navigation-light-text: $-black;
+$navigation-light-text-hover: $-white;
+$navigation-light-text-active: $-dim-green;
+$navigation-light-button: $-dim-green;
+$navigation-light-button-hover: $-light-green;
+$navigation-light-button-text: $-white;
+
+$tooltip-primary-background: $-light-green;
+$tooltip-primary-text: $-black;
+$tooltip-secondary-background: $-dim-green;
+$tooltip-secondary-text: $-white;
+$tooltip-warning-background: $-red;
+$tooltip-warning-text: $-white;

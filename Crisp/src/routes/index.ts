@@ -1,10 +1,11 @@
-enum ROUTES {
+export enum MainRoutes {
     HOME = "/",
     LOGIN = "/login",
+}
+
+export enum SubRoutes {
     ABOUT = "about",
     PRODUCTS = "products",
     BLOG = "blog",
-    contact = "contact",
+    CONTACT = "contact",
 }
-
-export { ROUTES }

@@ -1,5 +1,5 @@
 import { Outlet, Route, Routes } from 'react-router-dom'
-import { ROUTES } from './routes'
+import { MainRoutes, SubRoutes } from './routes'
 import Home from './pages/Home'
 import About from './pages/About'
 import { Suspense } from 'react'
@@ -7,6 +7,8 @@ import Loader from './modules/common/components/Loader'
 import Login from './pages/Login'
 import { Toaster } from 'sonner'
 import Navigation from './modules/common/components/navigation'
+import Contact from './pages/Contact'
+import Blog from './pages/Blog'
 
 
 // TODO - Create a loader for APP suspense
@@ -34,11 +36,13 @@ function App() {
     <>
     <Suspense fallback={<Loader />}>
       <Routes>
-        <Route path={ROUTES.HOME} element={<BasicLayout />}>
+        <Route path={MainRoutes.HOME} element={<BasicLayout />}>
           <Route index element={<Home />} />
-          <Route path={ROUTES.ABOUT} element={<About />} />
+          <Route path={SubRoutes.ABOUT} element={<About />} />
+          <Route path={SubRoutes.CONTACT} element={<Contact />} />
+          <Route path={SubRoutes.BLOG} element={<Blog />} />
         </Route>
-        <Route path={ROUTES.LOGIN} element={<LoginLayout />}>
+        <Route path={MainRoutes.LOGIN} element={<LoginLayout />}>
           <Route index element={<Login />} />
         </Route>
       </Routes>

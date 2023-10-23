@@ -5,6 +5,7 @@ import UserArea from "./UserArea";
 import Logo from "./Logo";
 
 const Navigation: React.FC = () => {
+
   return (
     <nav className='navigation'>
       <div className='navigation__container'>

@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { authenticationViewMode } from "../../contants/login";
 import PanelContainer from "../PanelContainer";
 import "./styles.scss";
 import PanelToggle from "../PanelToggle";
-import { useAppSelector } from "../../../../store";
+import { useAppDispatch, useAppSelector } from "../../../../store";
 import { selectLoginViewMode } from "../../store/selectors/login";
+import { authUser } from "../../store";
+import { toast } from "sonner";
+import { useNavigate } from "react-router";
 
 const LoginPanel: React.FC = () => {
   const activePanel = useAppSelector(selectLoginViewMode);
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   console.log(activePanel);
 
-  const handleSubmit = () => {
-    console.log("Submit");
+  const handleSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    const userStatus = dispatch(authUser({username: username, password: password}));
+    if (userStatus) {
+      toast.success('Login successful');
+      navigate('/');
+    } else {
+      toast.error('Invalid username or password');
+    }
   };
+  // Test
   return (
     <>
       {activePanel === "LOGIN" ? (
@@ -20,8 +35,8 @@ const LoginPanel: React.FC = () => {
           <div className='login-panel__container'>
             <h1 className='login-panel__title'>Login Panel</h1>
             <form className='login-panel__form' onSubmit={handleSubmit}>
-              <input type='text' placeholder='Username' className='login-panel__input' />
-              <input type='password' placeholder='Password' className='login-panel__input' />
+              <input type='text' placeholder='Username' className='login-panel__input' value={username} onChange={(e) => setUsername(e.target.value)} />
+              <input type='password' placeholder='Password' className='login-panel__input' value={password} onChange={(e) => setPassword(e.target.value)} />
               <button type='submit' className='login-panel__submit'>
                 Login
               </button>

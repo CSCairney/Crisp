@@ -3,7 +3,10 @@ import userSlice from "./userSlice";
 export const {
     getUser,
     getUsers,
-    setViewMode
+    setViewMode,
+    setUser,
+    setUsers,
+    authUser
 } = userSlice.actions;
 
 export default userSlice.reducer;

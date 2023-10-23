@@ -1,7 +1,8 @@
 import { ActionWithThunk } from "../../../../modules/common/types/store";
 import { userLogin } from "../../types/users";
-import { authUser } from "..";
+import { authUser, setUserState, logoutActiveUser } from "..";
 import { toast } from "sonner";
+import { createUserSettings } from "../helpers/users";
 
 export function loginUser( userInfo: userLogin): ActionWithThunk {
     return (dispatch, getState) => {
@@ -18,3 +19,22 @@ export function loginUser( userInfo: userLogin): ActionWithThunk {
         }
     }
 }
+
+export function logoutUser(): ActionWithThunk {
+    return (dispatch) => {
+        try {
+                dispatch(logoutActiveUser());
+                toast.success('Logout successful');
+        } catch (e) {
+            toast.error("Error Logout");
+            throw new Error("Error with logout");
+        }
+    }
+}
+
+export const getPersistedUserSettings = (): ActionWithThunk => {
+    const userSettings = createUserSettings();
+    return (dispatch) => {
+      dispatch(setUserState(userSettings));
+    };
+  };

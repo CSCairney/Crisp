@@ -6,7 +6,9 @@ export const {
     setViewMode,
     setUser,
     setUsers,
-    authUser
+    authUser,
+    setUserState,
+    logoutActiveUser
 } = userSlice.actions;
 
 export default userSlice.reducer;

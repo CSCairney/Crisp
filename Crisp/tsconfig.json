@@ -34,13 +34,6 @@
       "~/*": ["./src/modules/*"]
     }
   },
-  "include": [
-  "src",
-  "src/styled.d.ts",
-  "src/__mocks__",
-  "test",
-  "./*.ts",
-  "scripts",
-  "api"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -8,7 +8,7 @@ import Login from './pages/Login'
 import { Toaster } from 'sonner'
 import Contact from './pages/Contact'
 import Blog from './pages/Blog'
-import Navigation from './modules/common/components/Navigation'
+import Navbar from './modules/common/components/Navbar'
 
 
 // TODO - Create a loader for APP suspense
@@ -16,7 +16,7 @@ function App() {
   function BasicLayout() {
     return (
       <>
-        <Navigation />
+        <Navbar />
         <Toaster closeButton={true} richColors={true}/>
         <Outlet />
       </>

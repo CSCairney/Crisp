@@ -7,7 +7,8 @@ export const {
     setUser,
     setUsers,
     authUser,
-    setUserState
+    setUserState,
+    logoutActiveUser
 } = userSlice.actions;
 
 export default userSlice.reducer;

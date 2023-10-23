@@ -6,7 +6,7 @@
         grid-template-columns: repeat(1, 1fr);
         &--link {
             display: grid;
-            width:50px;
+            width:70px;
             grid-template-columns: repeat(1, 1fr);
             background-color:colors.$navigation-light-button;
             color: colors.$navigation-light-button-text;
@@ -14,6 +14,9 @@
             align-self: center;
             border: 1px solid transparent;
             border-radius: 10px;
+            text-align: center;
+            align-self: center;
+            justify-self: center;
             &:hover {
                 background-color: colors.$navigation-light-button-hover;
             }

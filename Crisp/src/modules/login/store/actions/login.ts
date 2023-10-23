@@ -1,6 +1,6 @@
 import { ActionWithThunk } from "../../../../modules/common/types/store";
 import { userLogin } from "../../types/users";
-import { authUser, setUserState } from "..";
+import { authUser, setUserState, logoutActiveUser } from "..";
 import { toast } from "sonner";
 import { createUserSettings } from "../helpers/users";
 
@@ -16,6 +16,18 @@ export function loginUser( userInfo: userLogin): ActionWithThunk {
         } catch (e) {
             toast.error("Error logging in user");
             throw new Error("Error logging in user");
+        }
+    }
+}
+
+export function logoutUser(): ActionWithThunk {
+    return (dispatch) => {
+        try {
+                dispatch(logoutActiveUser());
+                toast.success('Logout successful');
+        } catch (e) {
+            toast.error("Error Logout");
+            throw new Error("Error with logout");
         }
     }
 }

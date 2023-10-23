@@ -38,6 +38,9 @@ const teamSlice = createSlice({
                 return null;
             })
         },
+        logoutActiveUser: (state) => {
+            state.activeUserId = "";
+        },
         setViewMode: (state, action: PayloadAction<authenticationViewMode>) => {
            state.viewMode = action.payload;
         }

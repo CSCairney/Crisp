@@ -1,12 +1,17 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { createInitialUserState } from "./userState";
 import { authenticationViewMode } from "../contants/login";
-import { userInfo, userLogin } from "../types/users";
+import { userInfo, userLogin, userState } from "../types/users";
 
 const teamSlice = createSlice({
     name: "userState",
     initialState: createInitialUserState(),
     reducers: {
+        setUserState: (state, action: PayloadAction<userState>) => {
+            state.activeUserId = action.payload.activeUserId;
+            state.users = action.payload.users;
+            state.viewMode = action.payload.viewMode;
+        },
         setUser: (state, action: PayloadAction<userInfo>) => {
             state.users.push(action.payload);
         },

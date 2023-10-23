@@ -1,7 +1,8 @@
 import { ActionWithThunk } from "../../../../modules/common/types/store";
 import { userLogin } from "../../types/users";
-import { authUser } from "..";
+import { authUser, setUserState } from "..";
 import { toast } from "sonner";
+import { createUserSettings } from "../helpers/users";
 
 export function loginUser( userInfo: userLogin): ActionWithThunk {
     return (dispatch, getState) => {
@@ -18,3 +19,10 @@ export function loginUser( userInfo: userLogin): ActionWithThunk {
         }
     }
 }
+
+export const getPersistedUserSettings = (): ActionWithThunk => {
+    const userSettings = createUserSettings();
+    return (dispatch) => {
+      dispatch(setUserState(userSettings));
+    };
+  };

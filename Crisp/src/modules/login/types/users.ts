@@ -16,9 +16,15 @@ export type userInfo = {
     },
 }
 
+export type userLogin = {
+    username: string,
+    password: string
+}
+
 export type userState = {
     isLoading: boolean,
     viewMode: authenticationViewMode,
     errorMessage: string,
+    activeUserId: string,
     users: userInfo[];
 }

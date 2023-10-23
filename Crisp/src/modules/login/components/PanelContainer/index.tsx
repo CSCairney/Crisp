@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.scss";
+import "../../../../styles/animations.scss"
 
 type PanelContainerProps = {
   position: "left" | "right";
@@ -7,7 +8,7 @@ type PanelContainerProps = {
 };
 
 const PanelContainer: React.FC<PanelContainerProps> = ({ position, children }) => {
-    const positionClass = `panel-container--${position}`;
+    const positionClass = `panel-container--${position}${position === "left" ? " slide-right" : " slide-left"}`;
   return (
     <>
       <div className={`panel-container ${positionClass}`}>{children}</div>

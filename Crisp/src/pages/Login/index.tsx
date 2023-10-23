@@ -1,7 +1,7 @@
 import LoginPanel from "../../modules/login/components/LoginPanel";
 import RegisterPanel from "../../modules/login/components/RegisterPanel";
 import loginImage from "../../assets/login/login-image.jpeg";
-import registerImage from "../../assets/login/register-image.jpg";
+import registerImage from "../../assets/login/register-image.webp";
 import "./styles.scss";
 import { useAppSelector } from "../../store";
 import { selectLoginViewMode } from "../../modules/login/store/selectors/login";

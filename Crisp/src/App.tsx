@@ -8,7 +8,7 @@ import Login from './pages/Login'
 import { Toaster } from 'sonner'
 import Contact from './pages/Contact'
 import Blog from './pages/Blog'
-import Navigation from './modules/common/components/Navigation/index'
+import Navigation from './modules/common/components/Navigation'
 
 
 // TODO - Create a loader for APP suspense

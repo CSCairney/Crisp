@@ -32,6 +32,7 @@
       "~/store": ["./src/store.ts"],
       "~/assets/*": ["./src/assets/*"],
       "~/modules/*": ["./src/modules/*"],
+      "~/styles/*": ["./src/styles/*"],
     }
   },
   "include": ["src"],

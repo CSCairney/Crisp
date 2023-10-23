@@ -5,5 +5,6 @@ export const userMockState: userState = {
     isLoading: false,
         viewMode: authenticationViewMode.LOGIN,
         errorMessage: "",
+        activeUserId: "",
         users: [],
     };

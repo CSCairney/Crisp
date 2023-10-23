@@ -1,7 +1,7 @@
 import { createListenerMiddleware, isAnyOf } from "@reduxjs/toolkit";
 import { settingsPersistenceService } from "../localStorage/persistence";
 import { RootState } from "~/store";
-import { setUser, setUsers, setViewMode } from "../../login/store";
+import { authUser, setUser, setUsers, setViewMode } from "../../login/store";
 
 export const listenerMiddleware = createListenerMiddleware();
 
@@ -9,7 +9,8 @@ listenerMiddleware.startListening({
     matcher: isAnyOf(
       setViewMode,
       setUser,
-      setUsers
+      setUsers,
+      authUser
     ),
     effect: (_action, listenerApi) => {
       try {

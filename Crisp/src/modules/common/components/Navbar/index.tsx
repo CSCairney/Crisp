@@ -4,7 +4,7 @@ import ContentPages from "./ContentPages";
 import UserArea from "./UserArea";
 import Logo from "./Logo";
 
-const Navigation: React.FC = () => {
+const Navbar: React.FC = () => {
 
   return (
     <nav className='navigation'>
@@ -17,4 +17,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default Navigation;
+export default Navbar;

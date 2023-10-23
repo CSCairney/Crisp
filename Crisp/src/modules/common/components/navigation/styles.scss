@@ -1,0 +1,19 @@
+@use "src/styles/colors";
+
+.navigation {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 24px 48px;
+        margin: auto;
+        background-color: colors.$navigation-light-background;
+    }
+}

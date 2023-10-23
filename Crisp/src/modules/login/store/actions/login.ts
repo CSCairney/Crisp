@@ -1,4 +1,4 @@
-import { ActionWithThunk } from "~/modules/common/types/store";
+import { ActionWithThunk } from "../../../../modules/common/types/store";
 import { userLogin } from "../../types/users";
 import { authUser } from "..";
 import { toast } from "sonner";

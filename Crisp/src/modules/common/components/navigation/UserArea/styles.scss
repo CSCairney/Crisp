@@ -1,0 +1,18 @@
+@use "src/styles/colors";
+
+.user-area {
+    &__login {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        &--link {
+            background-color:colors.$navigation-light-button;
+            color: colors.$navigation-light-button-text;
+            padding: 5px  10px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            &:hover {
+                background-color: colors.$navigation-light-button-hover;
+            }
+        }
+    }
+}

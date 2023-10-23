@@ -6,7 +6,7 @@ import { Suspense } from 'react'
 import Loader from './modules/common/components/Loader'
 import Login from './pages/Login'
 import { Toaster } from 'sonner'
-import Navigation from './modules/common/components/navigation'
+import Navigation from './modules/common/components/Navigation'
 import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 

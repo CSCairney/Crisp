@@ -1,0 +1,22 @@
+@use "src/styles/colors";
+
+.content-pages {
+    &__links-container{
+        display: grid;
+        width: 30%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    &__link {
+        text-align: center;
+        color: colors.$navigation-light-text;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 5px  10px;
+        &:hover {
+            background-color: colors.$navigation-light-background-hover;
+            color: colors.$navigation-light-text-hover;
+        }
+    }
+}

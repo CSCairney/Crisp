@@ -28,13 +28,19 @@
 
     "baseUrl": "./",
     "paths": {
-      "~/tests/*": ["./tests/*"],
+      "~/test/*": ["./test/*"],
       "~/store": ["./src/store.ts"],
       "~/assets/*": ["./src/assets/*"],
-      "~/modules/*": ["./src/modules/*"],
-      "~/styles/*": ["./src/styles/*"],
+      "~/*": ["./src/modules/*"]
     }
   },
-  "include": ["src"],
+  "include": [
+  "src",
+  "src/styled.d.ts",
+  "src/__mocks__",
+  "test",
+  "./*.ts",
+  "scripts",
+  "api"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

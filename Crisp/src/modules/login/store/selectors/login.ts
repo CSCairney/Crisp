@@ -15,13 +15,13 @@ export const selectLoginViewMode = createSelector(
 export const selectHasUser = (userInfo: userInfo) => createSelector(
   [selectUserState],
   (userState) => {
-    return userState.user.info.username === userInfo.username;
+    return userState.user.username === userInfo.username;
   }
 );
 
 export const selectActiveUserInfo = createSelector(
   [selectUserState],
   (userState) => {
-    return userState.user.info;
+    return userState.user;
   }
 );

@@ -20,8 +20,6 @@ export type userState = {
     isLoading: boolean,
     viewMode: authenticationViewMode,
     errorMessage: string,
-    user: {
-        info: userInfo;
-        accessToken: string;
-    }
+    user: userInfo;
+    accessToken: string;
 }

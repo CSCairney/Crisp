@@ -12,10 +12,10 @@ const teamSlice = createSlice({
             state.viewMode = action.payload.viewMode;
         },
         setUser: (state, action: PayloadAction<userInfo>) => {
-            state.user.info = action.payload;
+            state.user = action.payload;
         },
         clearUser: (state) => {
-            state.user.info = {
+            state.user = {
                 age: 0,
                 email: "",
                 first_name: "",
@@ -24,13 +24,13 @@ const teamSlice = createSlice({
                 role: "",
                 username: "",
             };
-            state.user.accessToken = "";
+            state.accessToken = "";
         },
         setViewMode: (state, action: PayloadAction<authenticationViewMode>) => {
            state.viewMode = action.payload;
         },
         setUserJWT: (state, action: PayloadAction<string>) => {
-            state.user.accessToken = action.payload;
+            state.accessToken = action.payload;
         }
     }
 })

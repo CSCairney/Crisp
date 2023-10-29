@@ -9,6 +9,7 @@ import { selectLoginViewMode } from "../../store/selectors/login";
 import { useNavigate } from "react-router";
 import { toast } from "sonner";
 import { setUser, setUserJWT } from "../../store/index";
+import { userInfo } from "~/login/types/users";
 
 const LoginPanel: React.FC = () => {
   const activePanel = useAppSelector(selectLoginViewMode);
@@ -27,8 +28,10 @@ const LoginPanel: React.FC = () => {
 
     try {
         const response = await axios.post('http://localhost:3000/login', loginInfo);
-        dispatch(setUser(response.data.data.user));
-        dispatch(setUserJWT(response.data.data.token));
+        const user: userInfo = response.data.data.user;
+        const token = response.data.data.token;
+        dispatch(setUser(user));
+        dispatch(setUserJWT(token));
         toast.success('Login successful');
         navigate('/');
     } catch (error) {

@@ -7,7 +7,6 @@ export function createInitialUserState(): userState {
     viewMode: authenticationViewMode.LOGIN,
     errorMessage: "",
     user: {
-      info: {
         age: 0,
         email: "",
         first_name: "",
@@ -17,7 +16,6 @@ export function createInitialUserState(): userState {
         username: "",
         user_id: "",
       },
-      accessToken: "",
-    },
+    accessToken: ""
   };
 }

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { authenticationViewMode } from "../../contants/login";
 import PanelContainer from "../PanelContainer";
+import axios from 'axios';
 import "./styles.scss";
 import PanelToggle from "../PanelToggle";
 import { useAppDispatch, useAppSelector } from "../../../../store";
 import { selectLoginViewMode } from "../../store/selectors/login";
 import { useNavigate } from "react-router";
-import { loginUser } from "../../store/actions/login";
+import { toast } from "sonner";
+import { setUser, setUserJWT } from "../../store/index";
 
 const LoginPanel: React.FC = () => {
   const activePanel = useAppSelector(selectLoginViewMode);
@@ -15,10 +17,24 @@ const LoginPanel: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-      dispatch(loginUser({ username: username,password: password }));
-      navigate('/');
+
+    const loginInfo = {
+      username: username,
+      password: password,
+    }
+
+    try {
+        const response = await axios.post('http://localhost:3000/login', loginInfo);
+        dispatch(setUser(response.data.data.user));
+        dispatch(setUserJWT(response.data.data.token));
+        toast.success('Login successful');
+        navigate('/');
+    } catch (error) {
+        console.error(error);
+        toast.error('Failed to Login successful');
+    }
   };
   // Test
   return (

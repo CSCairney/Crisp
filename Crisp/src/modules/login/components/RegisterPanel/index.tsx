@@ -6,7 +6,7 @@ import PanelToggle from "../PanelToggle";
 import "./styles.scss";
 import { selectLoginViewMode } from "../../store/selectors/login";
 import { useState } from "react";
-import { setUser, setUserJWT } from "../../store";
+import { setUser, setUserJWT, setViewMode } from "../../store";
 import { userInfo } from "../../types/users";
 import { toast } from "sonner";
 
@@ -35,10 +35,9 @@ const RegisterPanel: React.FC = () => {
   
     try {
       const response = await axios.post('http://localhost:3000/signup', data);
-      console.log(response.data);
-      dispatch(setUser(response.data.user));
-      dispatch(setUserJWT(response.data.token));
-  
+      dispatch(setUser(response.data.data.user));
+      dispatch(setUserJWT(response.data.data.token));
+      dispatch(setViewMode(authenticationViewMode.LOGIN));
       toast.success('New user registered');
     } catch (error) {
       console.error(error);

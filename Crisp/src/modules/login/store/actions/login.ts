@@ -1,13 +1,13 @@
 import { ActionWithThunk } from "../../../../modules/common/types/store";
 import { userLogin } from "../../types/users";
-import { setUserState, logoutActiveUser } from "..";
+import { clearUser, setUserState } from "..";
 import { toast } from "sonner";
 import { createUserSettings } from "../helpers/users";
 
 export function loginUser( userInfo: userLogin): ActionWithThunk {
     return (dispatch, getState) => {
         try {
-            if (getState().userState.users.some((user) => user.username === userInfo.username && user.password === userInfo.password)) {
+            if (getState().userState.user.info.username === userInfo.username) {
                 toast.success('Login successful');
             } else {
                 toast.error("Invalid username or password");
@@ -22,7 +22,7 @@ export function loginUser( userInfo: userLogin): ActionWithThunk {
 export function logoutUser(): ActionWithThunk {
     return (dispatch) => {
         try {
-                dispatch(logoutActiveUser());
+            dispatch(clearUser())
                 toast.success('Logout successful');
         } catch (e) {
             toast.error("Error Logout");

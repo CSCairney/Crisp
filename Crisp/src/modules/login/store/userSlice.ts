@@ -8,35 +8,29 @@ const teamSlice = createSlice({
     initialState: createInitialUserState(),
     reducers: {
         setUserState: (state, action: PayloadAction<userState>) => {
-            state.activeUserId = action.payload.activeUserId;
-            state.users = action.payload.users;
+            state.user = action.payload.user;
             state.viewMode = action.payload.viewMode;
         },
         setUser: (state, action: PayloadAction<userInfo>) => {
-            state.users.push(action.payload);
+            state.user.info = action.payload;
         },
-        setUsers: (state, action: PayloadAction<userInfo[]>) => {
-            state.users = action.payload;
-        },
-        getUser: (state, action: PayloadAction<string>) => {
-            state.users.forEach((user) => {
-                if (user.username === action.payload) {
-                    return user;
-                }
-                return null;
-            })
-        },
-        getUsers: (state) => {
-            state.users;
-        },
-        logoutActiveUser: (state) => {
-            state.activeUserId = "";
+        clearUser: (state) => {
+            state.user.info = {
+                age: 0,
+                email: "",
+                first_name: "",
+                last_name: "",
+                password: "",
+                role: "",
+                username: "",
+            };
+            state.user.accessToken = "";
         },
         setViewMode: (state, action: PayloadAction<authenticationViewMode>) => {
            state.viewMode = action.payload;
         },
         setUserJWT: (state, action: PayloadAction<string>) => {
-            state.userJWT = action.payload;
+            state.user.accessToken = action.payload;
         }
     }
 })

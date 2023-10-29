@@ -1,13 +1,10 @@
 import userSlice from "./userSlice";
 
 export const {
-    getUser,
-    getUsers,
     setViewMode,
     setUser,
-    setUsers,
+    clearUser,
     setUserState,
-    logoutActiveUser,
     setUserJWT
 } = userSlice.actions;
 

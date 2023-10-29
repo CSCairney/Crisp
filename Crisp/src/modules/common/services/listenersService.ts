@@ -1,7 +1,7 @@
 import { createListenerMiddleware, isAnyOf } from "@reduxjs/toolkit";
 import { settingsPersistenceService } from "../localStorage/persistence";
 import { RootState } from "~/store";
-import { authUser, setUser, setUsers, setViewMode } from "../../login/store";
+import { setUser, setUserJWT, setUsers, setViewMode } from "../../login/store";
 import { setLinesLoading, setMarkersLoading, setPolygonsLoading } from "../../mapSettings/store";
 
 export const listenerMiddleware = createListenerMiddleware();
@@ -11,7 +11,7 @@ listenerMiddleware.startListening({
       setViewMode,
       setUser,
       setUsers,
-      authUser,
+      setUserJWT
     ),
     effect: (_action, listenerApi) => {
       try {

@@ -7,6 +7,7 @@ export function createInitialUserState(): userState {
         viewMode: authenticationViewMode.LOGIN,
         errorMessage: "",
         activeUserId: "",
+        userJWT: "",
         users: [],
 }
 }

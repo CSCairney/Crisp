@@ -7,9 +7,8 @@ import PanelToggle from "../PanelToggle";
 import { useAppDispatch, useAppSelector } from "../../../../store";
 import { selectLoginViewMode } from "../../store/selectors/login";
 import { useNavigate } from "react-router";
-import { toast } from "sonner";
-import { setUser, setUserJWT } from "../../store/index";
 import { userInfo } from "~/login/types/users";
+import { loginUser } from "~/login/store/actions/login";
 
 const LoginPanel: React.FC = () => {
   const activePanel = useAppSelector(selectLoginViewMode);
@@ -24,20 +23,12 @@ const LoginPanel: React.FC = () => {
     const loginInfo = {
       username: username,
       password: password,
-    }
-
-    try {
-        const response = await axios.post('http://localhost:3000/login', loginInfo);
-        const user: userInfo = response.data.data.user;
-        const token = response.data.data.token;
-        dispatch(setUser(user));
-        dispatch(setUserJWT(token));
-        toast.success('Login successful');
-        navigate('/');
-    } catch (error) {
-        console.error(error);
-        toast.error('Failed to Login successful');
-    }
+    };
+    const response = await axios.post("http://localhost:3000/login", loginInfo);
+    const user: userInfo = response.data.data.user;
+    const token = response.data.data.token;
+    dispatch(loginUser(user, token));
+    navigate("/");
   };
   // Test
   return (

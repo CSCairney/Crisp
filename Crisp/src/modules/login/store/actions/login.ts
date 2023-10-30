@@ -1,17 +1,15 @@
 import { ActionWithThunk } from "../../../../modules/common/types/store";
-import { userLogin } from "../../types/users";
-import { clearUser, setUserState } from "..";
+import { userInfo } from "../../types/users";
+import { clearUser, setUser, setUserJWT, setUserState } from "..";
 import { toast } from "sonner";
 import { createUserSettings } from "../helpers/users";
 
-export function loginUser( userInfo: userLogin): ActionWithThunk {
-    return (dispatch, getState) => {
+export function loginUser( userInfo: userInfo, token: string): ActionWithThunk {
+    return (dispatch) => {
         try {
-            if (getState().userState.user.info.username === userInfo.username) {
+                dispatch(setUser(userInfo));
+                dispatch(setUserJWT(token));
                 toast.success('Login successful');
-            } else {
-                toast.error("Invalid username or password");
-            }
         } catch (e) {
             toast.error("Error logging in user");
             throw new Error("Error logging in user");

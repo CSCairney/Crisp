@@ -21,8 +21,17 @@ export type markerResponse = {
   status: boolean,
 }
 
+export type markerDetail = {
+  coordinate: {
+    lat: number,
+    lng: number,
+  }
+  markerName: string,
+  observations: string[],
+}
+
 export type markerData = {
-  details: [],
+  details: markerDetail[],
   grouptype: string,
   layer_id: number,
   layer: string,

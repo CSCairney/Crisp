@@ -24,8 +24,8 @@ export type markerResponse = {
 export type markerDetail = {
   coordinate: {
     lat: number,
-    lng: number,
-  }
+    long: number,
+  },
   markerName: string,
   observations: string[],
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.scss";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer} from "react-leaflet";
 import MarkersGroup from "../MarkersGroup";
 
 const Map: React.FC = () => {

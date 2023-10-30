@@ -7,8 +7,8 @@ import PanelToggle from "../PanelToggle";
 import { useAppDispatch, useAppSelector } from "../../../../store";
 import { selectLoginViewMode } from "../../store/selectors/login";
 import { useNavigate } from "react-router";
-import { userInfo } from "~/login/types/users";
-import { loginUser } from "~/login/store/actions/login";
+import { userInfo } from "../../types/users";
+import { loginUser } from "../../store/actions/login";
 
 const LoginPanel: React.FC = () => {
   const activePanel = useAppSelector(selectLoginViewMode);

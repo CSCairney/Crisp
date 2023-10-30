@@ -10,9 +10,18 @@ export function createDefaultUserSettings(): userState {
     isLoading: false,
     viewMode: authenticationViewMode.LOGIN,
     errorMessage: "",
-    activeUserId: "",
-    users: []
-    }
+    user: {
+        age: 0,
+        email: "",
+        first_name: "",
+        last_name: "",
+        password: "",
+        role: "",
+        username: "",
+        user_id: "",
+      },
+    accessToken: ""
+    } 
   }
 
 export function createMergedUserSettings(

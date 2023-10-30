@@ -21,7 +21,6 @@ const UserInfoPopup: React.FC<UserInfoPopupProps> = ({user}) => {
                 <p>Email: {user.email}</p>
                 <p>Username: {user.username}</p>
                 <p>Role: {user.role}</p>
-                <p>Account Creation: {user.created_at}</p>
             </div>
         <button className="user-info__button" onClick={logoutHandler} >Logout</button>
         </div>

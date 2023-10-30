@@ -1,19 +1,14 @@
 import { authenticationViewMode } from "../contants/login";
-import { accessLevel } from "../contants/users";
 
 export type userInfo = {
-    id: string,
-    username: string,
+    age: number,
     email: string,
+    first_name: string,
+    last_name: string,
     password: string,
-    role: accessLevel,
-    status: string,
-    created_at: string,
-    updated_at: string,
-    contactInfo: {
-        mobile: string,
-        landline?: string
-    },
+    role: string,
+    user_id?: string,
+    username: string,
 }
 
 export type userLogin = {
@@ -25,6 +20,6 @@ export type userState = {
     isLoading: boolean,
     viewMode: authenticationViewMode,
     errorMessage: string,
-    activeUserId: string,
-    users: userInfo[];
+    user: userInfo;
+    accessToken: string;
 }

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { authenticationViewMode } from "../../contants/login";
 import PanelContainer from "../PanelContainer";
+import axios from 'axios';
 import "./styles.scss";
 import PanelToggle from "../PanelToggle";
 import { useAppDispatch, useAppSelector } from "../../../../store";
 import { selectLoginViewMode } from "../../store/selectors/login";
 import { useNavigate } from "react-router";
+import { userInfo } from "../../types/users";
 import { loginUser } from "../../store/actions/login";
 
 const LoginPanel: React.FC = () => {
@@ -15,10 +17,18 @@ const LoginPanel: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-      dispatch(loginUser({ username: username,password: password }));
-      navigate('/');
+
+    const loginInfo = {
+      username: username,
+      password: password,
+    };
+    const response = await axios.post("http://localhost:3000/login", loginInfo);
+    const user: userInfo = response.data.data.user;
+    const token = response.data.data.token;
+    dispatch(loginUser(user, token));
+    navigate("/");
   };
   // Test
   return (

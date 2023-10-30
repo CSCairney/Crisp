@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { createInitialMapState } from "./mapState";
-import { mapState } from "../types/map";
+import { mapState, markerData } from "../types/map";
 
 const mapSlice = createSlice({
     name: "mapState",
@@ -20,10 +20,10 @@ const mapSlice = createSlice({
     setPolygonsLoading: (state, action) => {
         state.polygons.isLoading = action.payload;
     },
-    setMarkerData: (state, action) => {
-        state.markers.data = action.payload;
-    }
-}
-})
+    setMarkerData: (state, action: PayloadAction<markerData[]>) => {
+        const layers = action.payload;
+        state.markers.data = layers;
+        }
+    }})
 
 export default mapSlice;

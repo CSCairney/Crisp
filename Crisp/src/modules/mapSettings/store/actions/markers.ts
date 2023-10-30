@@ -1,4 +1,5 @@
-import { setMarkersLoading } from "..";
+import { markerResponse } from "../../types/map";
+import { setMarkerData, setMarkersLoading } from "..";
 import { ActionWithThunk } from "../../../common/types/store";
 import axios from "axios";
 
@@ -15,9 +16,10 @@ export const fetchMarkerData = (accessToken: string): ActionWithThunk => {
   return async (dispatch) => {
     dispatch(setMarkersLoading(true));
     try {
-      const data = await queryMarkerData(accessToken);
-      console.log(data);
-      // Dispatch your action with the data if needed
+      const response: markerResponse = await queryMarkerData(accessToken);
+      const markerLayers = response.data.filter((layer) => layer.maptype === 'Marker');
+      console.log(markerLayers);
+      dispatch(setMarkerData(markerLayers));
     } catch (error) {
       // Handle error if the request fails
       console.error(error);

@@ -1,17 +1,30 @@
 export type mapState = {
     polygons: {
         isLoading: boolean,
-        error: null,
-        data: null,
+        error: string,
+        data: [],
       },
       markers: {
         isLoading: boolean,
-        error: null,
-        data: null,
+        error: string,
+        data: markerData[],
       },
       lines: {
         isLoading: boolean,
-        error: null,
-        data: null,
+        error: string,
+        data: [],
       }
+}
+
+export type markerResponse = {
+  data: markerData[],
+  status: boolean,
+}
+
+export type markerData = {
+  details: [],
+  grouptype: string,
+  layer_id: number,
+  layer: string,
+  maptype: string,
 }

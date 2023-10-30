@@ -4,18 +4,18 @@ export function createInitialMapState(): mapState {
   return {
     polygons: {
       isLoading: false,
-      error: null,
-      data: null,
+      error: "",
+      data: [],
     },
     markers: {
       isLoading: false,
-      error: null,
-      data: null,
+      error: "",
+      data: [],
     },
     lines: {
       isLoading: false,
-      error: null,
-      data: null,
+      error: "",
+      data: [],
     },
   };
 }

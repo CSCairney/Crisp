@@ -19,6 +19,9 @@ const mapSlice = createSlice({
     },
     setPolygonsLoading: (state, action) => {
         state.polygons.isLoading = action.payload;
+    },
+    setMarkerData: (state, action) => {
+        state.markers.data = action.payload;
     }
 }
 })

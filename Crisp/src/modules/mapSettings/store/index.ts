@@ -4,7 +4,8 @@ export const {
     setLinesLoading,
     setMarkersLoading,
     setPolygonsLoading,
-    setMapState
+    setMapState,
+    setMarkerData
 } = mapSlice.actions;
 
 export default mapSlice.reducer;

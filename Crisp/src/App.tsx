@@ -9,17 +9,28 @@ import { Toaster } from "sonner";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Navbar from "./modules/common/components/Navbar";
-import { useAppDispatch } from "./store";
+import { useAppDispatch, useAppSelector } from "./store";
 import { getPersistedUserSettings } from "./modules/login/store/actions/login";
 import { getPersistedMapSettings } from "./modules/mapSettings/store/actions/map";
+import { selectAccessToken } from "./modules/login/store/selectors/login";
+import { fetchMarkerData } from "./modules/mapSettings/store/actions/markers";
 
 // TODO - Create a loader for APP suspense
 function App() {
+  const accessToken = useAppSelector(selectAccessToken);
+  console.log("Access Token:", accessToken);
   const dispatch = useAppDispatch();
+
   useEffect(() => {
     dispatch(getPersistedUserSettings());
     dispatch(getPersistedMapSettings());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (accessToken) {
+      dispatch(fetchMarkerData(accessToken));
+    }
+  }, [accessToken, dispatch]);
 
   function BasicLayout() {
     return (

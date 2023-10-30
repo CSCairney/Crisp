@@ -25,3 +25,10 @@ export const selectActiveUserInfo = createSelector(
     return userState.user;
   }
 );
+
+export const selectAccessToken = createSelector(
+  [selectUserState],
+  (userState) => {
+    return userState.accessToken;
+  }
+);

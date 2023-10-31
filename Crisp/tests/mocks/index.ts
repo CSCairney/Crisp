@@ -2,6 +2,7 @@ import { RootState } from "../../src/store";
 import { teamMockState } from "./teamState";
 import { userMockState } from "./userState";
 import { mapMockState } from "./mapState";
+import { overlayMockState } from "./overlayState";
 
 export const mockStoreData: RootState = {
     teamState: teamMockState,

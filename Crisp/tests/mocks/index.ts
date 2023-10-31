@@ -6,5 +6,6 @@ import { mapMockState } from "./mapState";
 export const mockStoreData: RootState = {
     teamState: teamMockState,
     userState: userMockState,
-    mapState: mapMockState
+    mapState: mapMockState,
+    overlayState: overlayMockState
 };

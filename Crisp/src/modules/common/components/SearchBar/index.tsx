@@ -13,6 +13,7 @@ const SearchBar: React.FC = () => {
       <div className='search-bar__container'>
         <form className='search-bar__form'>
           <input className='search-bar__input' type='text' placeholder='Search' value={searchTerm} onChange={(e) => setSearchTerm((e.target.value).toLowerCase())} />
+          <input type="reset" value="X" alt="Clear the search form" onClick={() => setSearchTerm("")}></input>
         </form>
         <div className='search-bar__results'>
           <ul>{searchTerm !== "" ? <Results searchResults={searchResults} /> : null}</ul>

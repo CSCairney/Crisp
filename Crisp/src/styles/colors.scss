@@ -15,6 +15,12 @@ $-black: #000000;
 $-dim-green: #2C6566;
 $-light-green: #449342;
 $-ocean: #C1F6ED;
+
+// Marker Colours
+$-burgandy: #800000;
+$-blue: #0000ff;
+$-orange: #ffa500;
+$-yellow: #ffff00;
 /*
   * Components. Only use the values that semantically makes sense for your element, or make a new name.
   * Try to match the naming convention to explain how the colour is used
@@ -55,3 +61,8 @@ $tooltip-warning-text: $-white;
 
 $user-info-background: $-white;
 $user-info-text: $-black;
+
+$marker-custom-tourism: $-light-green;
+$marker-custom-sport: $-blue;
+$marker-custom-location: $-orange;
+$marker-custom-entertainment: $-yellow;

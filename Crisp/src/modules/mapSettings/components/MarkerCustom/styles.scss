@@ -1,0 +1,16 @@
+@use "src/styles/colors";
+
+.markerCustom {
+    &--tourism {
+        background-color: colors.$marker-custom-tourism;
+    }
+    &--sports {
+        background-color: colors.$marker-custom-sport;
+    }
+    &--locations {
+        background-color: colors.$marker-custom-location;
+    }
+    &--entertainment {
+        background-color: colors.$marker-custom-entertainment;
+    }
+}

@@ -9,7 +9,6 @@ type MarkersGroupProps = {
 };
 
 const MarkersGroup: React.FC<MarkersGroupProps> = ({ layers }) => {
-  console.log("layers");
   console.table(layers);
 
   const markers = layers.flatMap((markerLayer, x) => {

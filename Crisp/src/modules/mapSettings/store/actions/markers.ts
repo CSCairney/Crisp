@@ -18,7 +18,6 @@ export const fetchMarkerData = (accessToken: string): ActionWithThunk => {
     try {
       const response: markerResponse = await queryMarkerData(accessToken);
       const markerLayers = response.data.filter((layer) => layer.maptype === 'Marker');
-      console.log(markerLayers);
       dispatch(setMarkerData(markerLayers));
     } catch (error) {
       // Handle error if the request fails

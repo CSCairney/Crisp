@@ -3,17 +3,17 @@ import { mapState } from "../../src/modules/mapSettings/types/map";
 export const mapMockState: mapState = {
     polygons: {
         isLoading: false,
-        error: null,
-        data: null,
+        error: "",
+        data: [],
       },
       markers: {
         isLoading: false,
-        error: null,
-        data: null,
+        error: "",
+        data: [],
       },
       lines: {
         isLoading: false,
-        error: null,
-        data: null,
+        error: "",
+        data: [],
       }
     };

@@ -1,6 +1,6 @@
 .map-container {
     position: absolute;
-    width: 100%;
+    width: calc(100% - 83px);
     // needed so that the map is always at the 'bottom' beneath modals/navigation/etc
     z-index: -1;
 }

@@ -5,26 +5,25 @@ import MarkerCustom from "../MarkerCustom";
 import { toast } from "sonner";
 
 type MarkersGroupProps = {
-    layers: markerData[];
+  layers: markerData[];
 };
 
-const MarkersGroup: React.FC<MarkersGroupProps> = ({layers}) => {
-    console.log("layers")
-    console.table(layers)
-    if (layers.length > 1) {
-        layers.flatMap((markerLayer) => {
-            markerLayer.details.map((marker) => {
-                return (
-                    <>
-                        <MarkerCustom layer={marker} />
-                    </>
-                )
-            });
-          });
-    }
-    return (
-        toast.error("No markers found")
-    );
-  };
+const MarkersGroup: React.FC<MarkersGroupProps> = ({ layers }) => {
+  console.log("layers");
+  console.table(layers);
 
-  export default MarkersGroup;
+  const markers = layers.flatMap((markerLayer) => {
+    return markerLayer.details.map((marker) => {
+      return <MarkerCustom key={marker.markerName} layer={marker} />;
+    });
+  });
+
+  if (markers.length > 0) {
+    return <>{markers}</>;
+  } else {
+    toast.error("No markers found");
+    return null; // or return a message like <div>No markers found</div>
+  }
+};
+
+export default MarkersGroup;

@@ -10,6 +10,7 @@ type MarkersCustomProps = {
 
 const MarkerCustom: React.FC<MarkersCustomProps> = ({ layer }) => {
   const coordinate: LatLngExpression = [layer.coordinate.lat, layer.coordinate.long];
+  console.log("coordinate", coordinate);
   return (
     <>
       <Marker key={layer.markerName} position={coordinate}>

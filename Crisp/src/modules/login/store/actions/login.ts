@@ -9,7 +9,6 @@ export function loginUser( userInfo: userInfo, token: string): ActionWithThunk {
         try {
                 dispatch(setUser(userInfo));
                 dispatch(setUserJWT(token));
-                toast.success('Login successful');
         } catch (e) {
             toast.error("Error logging in user");
             throw new Error("Error logging in user");

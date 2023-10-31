@@ -1,0 +1,14 @@
+@use "src/styles/colors";
+
+.result{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    list-style-type: none;
+    &:hover{
+        cursor: pointer;
+        background-color: colors.$search-result-background;
+
+    }
+}

@@ -9,6 +9,7 @@ import { selectLoginViewMode } from "../../store/selectors/login";
 import { useNavigate } from "react-router";
 import { userInfo } from "../../types/users";
 import { loginUser } from "../../store/actions/login";
+import { toast } from "sonner";
 
 const LoginPanel: React.FC = () => {
   const activePanel = useAppSelector(selectLoginViewMode);
@@ -29,6 +30,7 @@ const LoginPanel: React.FC = () => {
     const token = response.data.data.token;
     dispatch(loginUser(user, token));
     navigate("/");
+    toast.success('Login successful');
   };
   // Test
   return (

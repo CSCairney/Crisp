@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     width: fit-content;
+    max-width: 200px;
     height: auto;
     z-index: 1;
     top: 83px;
@@ -14,9 +15,9 @@
         border: 1px solid black;
         border-top: 1px transparent !important;
         border-bottom-right-radius: 10px;
-        padding:5px;
     }
     &__form {
+        padding: 5px;
         display: flex;
         flex-direction: row;
         justify-content: center;

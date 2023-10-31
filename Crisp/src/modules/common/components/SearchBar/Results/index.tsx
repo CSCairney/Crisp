@@ -1,16 +1,22 @@
 import React from "react";
 import { markerDetail } from "../../../../mapSettings/types/map";
+import "./styles.scss";
 
 type ResultsProps = {
     searchResults: markerDetail[];
     };
 
 const Results: React.FC<ResultsProps> = ({ searchResults }) => {
+
+    const resultHandler = (e: React.MouseEvent<HTMLLIElement>) => {
+        console.log(e.currentTarget);
+    }
+
   return (
     <ul>
-      {searchResults.map((result) => {
+      {searchResults.slice(0,5).map((result) => {
         return (
-          <li key={result.markerName}>
+          <li key={result.markerName} onClick={resultHandler} className="result">
             <ul>
               <li>
                 <strong>{result.markerName}</strong>
@@ -18,12 +24,12 @@ const Results: React.FC<ResultsProps> = ({ searchResults }) => {
               <li>
                 Coords: {result.coordinate.lat}, {result.coordinate.long}
               </li>
-              <li>
+              {/* <li>
                 Observations:{" "}
                 {result.observations.map((observation) => {
                   return <p key={observation}>{observation}</p>;
                 })}
-              </li>
+              </li> */}
             </ul>
           </li>
         );

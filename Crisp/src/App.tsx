@@ -18,7 +18,6 @@ import { fetchMarkerData } from "./modules/mapSettings/store/actions/markers";
 // TODO - Create a loader for APP suspense
 function App() {
   const accessToken = useAppSelector(selectAccessToken);
-  console.log("Access Token:", accessToken);
   const dispatch = useAppDispatch();
 
   useEffect(() => {

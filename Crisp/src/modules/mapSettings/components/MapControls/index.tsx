@@ -5,21 +5,31 @@ import { BsFilterCircleFill } from "react-icons/bs";
 import { BiStreetView } from "react-icons/bi";
 import "./styles.scss";
 import { useAppSelector } from "../../../../store";
-import { selectSidebarStatus } from "../../../common/store/selectors/menu";
+import { selectPanelStatus, selectSidebarStatus } from "../../../common/store/selectors/menu";
 import { useDispatch } from "react-redux";
 import { setPanelOpenStatus, setSidebarOpenStatus } from "../../../common/store/index";
 import { panelTypes } from "../../../common/constants/menu";
 
 const MapControls: React.FC = () => {
   const isSidebarOpen = useAppSelector(selectSidebarStatus);
+  const activePanel = useAppSelector(selectPanelStatus);
   const dispatch = useDispatch();
 
-  const menuHandler = (status: boolean) => {
-    dispatch(setSidebarOpenStatus(status))
+  const menuOpenHandler = () => {
+    dispatch(setSidebarOpenStatus(true))
+  }
+
+  const menuCloseHandler = () => {
+    dispatch(setSidebarOpenStatus(false))
+    dispatch(setPanelOpenStatus(panelTypes.None))
   }
 
   const panelHandler = (panel: panelTypes) => {
-    dispatch(setPanelOpenStatus(panel))
+    if (panel === activePanel) {
+        dispatch(setPanelOpenStatus(panelTypes.None))
+    } else {
+        dispatch(setPanelOpenStatus(panel))
+    }
   }
 
   if (isSidebarOpen) return (
@@ -34,7 +44,7 @@ const MapControls: React.FC = () => {
             <button onClick={() => panelHandler(panelTypes.Views)} className='map-controls__button'>
                 <BiStreetView className='map-controls__icon' />
             </button>
-            <button className="map-controls__button" onClick={() => menuHandler(false)}>
+            <button className="map-controls__button" onClick={() => menuCloseHandler()}>
               <FiArrowLeftCircle className='map-controls__icon' />
             </button>
           </div>
@@ -43,7 +53,7 @@ const MapControls: React.FC = () => {
 
     return (
         <div className='map-controls--closed'>
-          <button className="map-controls__button" onClick={() => menuHandler(true)}>
+          <button className="map-controls__button" onClick={() => menuOpenHandler()}>
             <FiArrowRightCircle className='map-controls__icon' />
           </button>
         </div>

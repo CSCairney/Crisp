@@ -16,6 +16,7 @@ const overlaySlice = createSlice({
         state.menu.isSidebarOpen = action.payload;
     },
     setPanelOpenStatus: (state, action: PayloadAction<panelTypes>) => {
+        console.log("setPanelOpenStatus", action.payload);
         state.menu.panelOpen = action.payload;
     },
     }})

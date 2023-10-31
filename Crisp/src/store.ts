@@ -3,6 +3,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import teamReducer from "../src/modules/team/store";
 import userReducer from "../src/modules/login/store";
 import mapReducer from "../src/modules/mapSettings/store";
+import overlayReducer from "../src/modules/common/store";
 import { listenerMiddleware } from "./modules/common/services/listenersService";
 
 export function createStore(preloadedState = {}) {
@@ -11,7 +12,8 @@ export function createStore(preloadedState = {}) {
             reducer: {
                 teamState: teamReducer,
                 userState: userReducer,
-                mapState: mapReducer
+                mapState: mapReducer,
+                overlayState: overlayReducer
             },
             middleware: (getDefaultMiddleware) =>
             getDefaultMiddleware().prepend(listenerMiddleware.middleware),

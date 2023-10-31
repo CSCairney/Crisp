@@ -1,0 +1,62 @@
+@use "src/styles/colors";
+
+.map-controls {
+    background-color: colors.$map-controls-light-background;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    border: 1px solid colors.$map-controls-light-background;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    &--closed{
+        @extend .map-controls;
+        display: flex;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+    }
+    &--open{
+        @extend .map-controls;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        height: 60px;
+    }
+    &__button {
+        display: flex;
+        background-color: colors.$map-controls-light-background;
+        color: colors.$map-controls-light-buttons;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 95%;
+        border: 1px solid colors.$map-controls-light-background;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+    &__icon {
+        width: 50px;
+        height: 50px;
+        &:hover{
+            cursor: pointer;
+            color: colors.$map-controls-light-buttons--hover !important;
+        }
+    }
+
+    &__container {
+        display: grid;
+        width: fit-content;
+        background-color: colors.$map-controls-light-background;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        border: 1px solid colors.$map-controls-light-background;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+
+    &__panel {
+        background-color: colors.$map-controls-light-background;
+    }
+}

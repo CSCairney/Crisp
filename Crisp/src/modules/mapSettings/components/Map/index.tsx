@@ -5,6 +5,7 @@ import MarkersGroup from "../MarkersGroup";
 import { useAppSelector } from "../../../../store";
 import { selectMarkerLayers } from "../../store/selectors/markers";
 import SearchBar from "../../../common/components/SearchBar";
+import MapControls from "../MapControls";
 
 const Map: React.FC = () => {
   const markerLayers = useAppSelector(selectMarkerLayers);
@@ -19,6 +20,7 @@ const Map: React.FC = () => {
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
         <MarkersGroup layers={markerLayers}/>
         <SearchBar />
+        <MapControls />
       </MapContainer>
     </div>
   );

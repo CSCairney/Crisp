@@ -12,9 +12,9 @@ const MarkersGroup: React.FC<MarkersGroupProps> = ({ layers }) => {
   console.log("layers");
   console.table(layers);
 
-  const markers = layers.flatMap((markerLayer) => {
+  const markers = layers.flatMap((markerLayer, x) => {
     return markerLayer.details.map((marker) => {
-      return <MarkerCustom key={marker.markerName} layer={marker} />;
+      return <MarkerCustom key={`Marker ID: ${x} - ${marker.markerName}`} layer={marker} type={markerLayer.grouptype} />;
     });
   });
 

@@ -3,22 +3,31 @@ import { Marker, Popup } from "react-leaflet";
 import "./styles.scss";
 import { LatLngExpression } from "leaflet";
 import { markerDetail } from "../../types/map";
+import { markerTypeIentifier } from "../../helpers/markerType";
 
 type MarkersCustomProps = {
   layer: markerDetail;
+  type: string;
 };
 
-const MarkerCustom: React.FC<MarkersCustomProps> = ({ layer }) => {
+const MarkerCustom: React.FC<MarkersCustomProps> = ({ layer, type }) => {
+  const className = markerTypeIentifier(type);
   const coordinate: LatLngExpression = [layer.coordinate.lat, layer.coordinate.long];
-  console.log("coordinate", coordinate);
+  console.log(className)
+
   return (
     <>
-      <Marker key={layer.markerName} position={coordinate}>
+      <Marker position={coordinate}>
         <Popup>
-          <p>
-            <strong>{layer.markerName}</strong>
-          </p>
-          <p>{layer.observations.join(", ")}</p>
+          <>
+            <h2><strong>{layer.markerName}</strong></h2>
+            <h3><strong>Observations</strong></h3>
+            <ul>
+              {layer.observations.map((observation) => {
+                return <li key={observation}>{observation}</li>;
+              })}
+            </ul>
+          </>
         </Popup>
       </Marker>
     </>

@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "../../../../store";
 import axios from 'axios';
 import { authenticationViewMode } from "../../contants/login";
-import PanelContainer from "../PanelContainer";
+import PanelContainer from "../AuthPanelContainer";
 import PanelToggle from "../PanelToggle";
 import "./styles.scss";
 import { selectLoginViewMode } from "../../store/selectors/login";

@@ -2,6 +2,7 @@ import { userState } from "src/modules/login/types/users";
 import { LocalStorageKeys } from "../constants/localStorage";
 import { DeepPartial } from "@reduxjs/toolkit";
 import { mapState } from "../../mapSettings/types/map";
+import { dataState } from "../../dataSelector/types/data";
 
 export const settingsPersistenceService = {
   // User Settings
@@ -10,4 +11,7 @@ export const settingsPersistenceService = {
   // Map Settings
   setMapSettings: (mapSettings: mapState): void => localStorage.setItem(LocalStorageKeys.mapSettings, JSON.stringify(mapSettings)),
   getMapSettings: (): DeepPartial<mapState> => JSON.parse(localStorage.getItem(LocalStorageKeys.mapSettings) || "null"),
+  // Data Settings
+  setDataSettings: (dataSettings: dataState): void => localStorage.setItem(LocalStorageKeys.dataSettings, JSON.stringify(dataSettings)),
+  getDataSettings: (): DeepPartial<dataState> => JSON.parse(localStorage.getItem(LocalStorageKeys.dataSettings) || "null"),
 };

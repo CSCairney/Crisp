@@ -7,14 +7,14 @@ const dataSlice = createSlice({
     initialState: createInitialDataState(),
     reducers: {
     setDataState: (state, action: PayloadAction<dataState>) => {
-        state.choosenLayerNames = action.payload.choosenLayerNames;
-        state.tempLayerNames = action.payload.tempLayerNames;
+        state.tempSelectedLayers = action.payload.tempSelectedLayers;
+        state.selectedLayers = action.payload.selectedLayers;
     },
-    setTempLayerNames: (state, action: PayloadAction<string[]>) => {
-        state.tempLayerNames = action.payload;
+    setTempSelectedLayers: (state, action: PayloadAction<string[]>) => {
+        state.tempSelectedLayers = action.payload;
     },
-    setChoosenLayerNames: (state, action: PayloadAction<string[]>) => {
-        state.choosenLayerNames = action.payload;
+    setSelectedLayers: (state, action: PayloadAction<string[]>) => {
+        state.selectedLayers = action.payload;
     },
     setError: (state, action: PayloadAction<string>) => {
         state.error = action.payload;
@@ -22,6 +22,9 @@ const dataSlice = createSlice({
     setLoading: (state, action: PayloadAction<boolean>) => {
         state.isLoading = action.payload;
     },
+    setDataLayers: (state, action: PayloadAction<string[]>) => {
+        state.dataLayers = action.payload;
+    }
     }})
 
 export default dataSlice;

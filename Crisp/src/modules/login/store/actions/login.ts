@@ -2,7 +2,7 @@ import { ActionWithThunk } from "../../../../modules/common/types/store";
 import { userInfo } from "../../types/users";
 import { clearUser, setUser, setUserJWT, setUserState } from "..";
 import { toast } from "sonner";
-import { createUserSettings } from "../helpers/users";
+import { createUserSettings } from "../../../common/localStorage/helpers/userMerge";
 
 export function loginUser( userInfo: userInfo, token: string): ActionWithThunk {
     return (dispatch) => {

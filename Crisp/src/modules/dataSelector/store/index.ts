@@ -3,8 +3,10 @@ import dataSlice from "./dataSlice";
 export const {
     setLoading,
     setError,
-    setChoosenLayerNames,
-    setTempLayerNames,
+    setTempSelectedLayers,
+    setSelectedLayers,
+    setDataLayers,
+    setDataState
 } = dataSlice.actions;
 
 export default dataSlice.reducer;

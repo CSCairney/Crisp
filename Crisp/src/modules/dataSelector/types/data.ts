@@ -1,6 +1,7 @@
 export type dataState = {
     isLoading: boolean;
     error: string;
-    tempLayerNames: string[];
-    choosenLayerNames: string[];
+    dataLayers: string[];
+    tempSelectedLayers: string[];
+    selectedLayers: string[];
     };

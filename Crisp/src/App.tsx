@@ -14,6 +14,7 @@ import { getPersistedUserSettings } from "./modules/login/store/actions/login";
 import { getPersistedMapSettings } from "./modules/mapSettings/store/actions/map";
 import { selectAccessToken } from "./modules/login/store/selectors/login";
 import { fetchMarkerData } from "./modules/mapSettings/store/actions/markers";
+import { getPersistedDataSettings } from "./modules/dataSelector/store/actions/data";
 
 // TODO - Create a loader for APP suspense
 function App() {
@@ -23,6 +24,7 @@ function App() {
   useEffect(() => {
     dispatch(getPersistedUserSettings());
     dispatch(getPersistedMapSettings());
+    dispatch(getPersistedDataSettings());
   }, [dispatch]);
 
   useEffect(() => {

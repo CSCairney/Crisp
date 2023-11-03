@@ -3,7 +3,7 @@ import { settingsPersistenceService } from "../localStorage/persistence";
 import { RootState } from "~/store";
 import { clearUser, setUser, setUserJWT, setUserState, setViewMode } from "../../login/store";
 import { setLinesLoading, setMarkersLoading, setPolygonsLoading } from "../../mapSettings/store";
-import { setChoosenLayerNames, setTempLayerNames } from "../../dataSelector/store";
+import { setSelectedLayers, setDataLayers, setTempSelectedLayers } from "../../dataSelector/store";
 
 export const listenerMiddleware = createListenerMiddleware();
 
@@ -45,8 +45,9 @@ listenerMiddleware.startListening({
 
   listenerMiddleware.startListening({
     matcher: isAnyOf(
-      setTempLayerNames,
-      setChoosenLayerNames
+      setTempSelectedLayers,
+      setSelectedLayers,
+      setDataLayers
     ),
     effect: (_action, listenerApi) => {
       try {

@@ -1,18 +1,27 @@
 import React from "react";
-import { useAppSelector } from "../../../store";
-import { selectPanelStatus } from "../../common/store/selectors/menu";
-import { panelTypes } from "../../common/constants/menu";
 import "./styles.scss";
+import { useAppSelector } from "../../../store";
+import { selectDataLayers } from "../store/selectors/dataSelectors";
 
 const DataSelector: React.FC = () => {
-  const activePanel = useAppSelector(selectPanelStatus);
+  const dataLayerNames = useAppSelector(selectDataLayers);
+
+  const layerCheckboxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+  }
+  
   return (
     <>
-      {activePanel === panelTypes.Selection ? (
         <div className='data-selector'>
-          <p className='data-selector__title'>This is a data selector</p>
+          <ul>
+          {dataLayerNames.map((layerName) => (
+            <>
+              <input type="checkbox" value={layerName} onChange={layerCheckboxHandler} />
+              <li key={layerName}>{layerName}</li>
+            </>
+          ))}
+          </ul>
         </div>
-      ) : null}
     </>
   );
 };

@@ -15,10 +15,13 @@ import { getPersistedMapSettings } from "./modules/mapSettings/store/actions/map
 import { selectAccessToken } from "./modules/login/store/selectors/login";
 import { fetchMarkerData } from "./modules/mapSettings/store/actions/markers";
 import { getPersistedDataSettings } from "./modules/dataSelector/store/actions/data";
+import { selectSelectedLayers } from "./modules/dataSelector/store/selectors/dataSelectors";
+import { fetchLayerNamesData } from "./modules/dataSelector/store/actions/dataLayers";
 
 // TODO - Create a loader for APP suspense
 function App() {
   const accessToken = useAppSelector(selectAccessToken);
+  const selectedLayers = useAppSelector(selectSelectedLayers)
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -28,16 +31,23 @@ function App() {
   }, [dispatch]);
 
   useEffect(() => {
-    if (accessToken) {
-      dispatch(fetchMarkerData(accessToken));
+    if (accessToken && selectedLayers) {
+      dispatch(fetchMarkerData(accessToken, selectedLayers));
     }
-  }, [accessToken, dispatch]);
+  }, [accessToken, selectedLayers, dispatch]);
+
+  useEffect(() => {
+    if (accessToken) {
+      dispatch(fetchLayerNamesData(accessToken));
+    }
+  }, [accessToken, selectedLayers, dispatch]);
 
   function BasicLayout() {
     return (
       <>
         <Navbar />
         <Toaster closeButton={true} richColors={true} />
+        <Loader />
         <Outlet />
       </>
     );
@@ -48,6 +58,7 @@ function App() {
       <>
         <Toaster closeButton={true} richColors={true} />
         <Outlet />
+        <Loader />
       </>
     );
   }

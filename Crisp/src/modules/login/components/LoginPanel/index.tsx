@@ -25,7 +25,7 @@ const LoginPanel: React.FC = () => {
       username: username,
       password: password,
     };
-    const response = await axios.post("http://localhost:3000/login", loginInfo);
+    const response = await axios.post("https://crisp-api-7bc2f4f0a358.herokuapp.com/login", loginInfo);
     const user: userInfo = response.data.data.user;
     const token = response.data.data.token;
     dispatch(loginUser(user, token));

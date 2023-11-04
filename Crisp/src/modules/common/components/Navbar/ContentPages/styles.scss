@@ -2,11 +2,18 @@
 
 .content-pages {
     &__links-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__links {
         display: grid;
-        width: 30%;
+        place-self: center;
+        width: fit-content;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
     }
+
 
     &__link {
         text-align: center;

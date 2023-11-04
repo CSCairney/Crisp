@@ -5,10 +5,12 @@ import "./styles.scss";
 const ContentPages: React.FC = () => {
     return (
         <div className='content-pages__links-container'>
+            <div className='content-pages__links'>
               <Link to={MainRoutes.HOME} className='content-pages__link' >Home</Link>
               <Link to={SubRoutes.CONTACT} className='content-pages__link' >{SubRoutes.CONTACT}</Link>
               <Link to={SubRoutes.ABOUT} className='content-pages__link' >{SubRoutes.ABOUT}</Link>
               <Link to={SubRoutes.BLOG} className='content-pages__link' >{SubRoutes.BLOG}</Link>
+            </div>
         </div>
     )
 }

@@ -5,9 +5,11 @@ import "./styles.scss"
 
 const Logo = () => {
     return (
+      <div className='logo'>
         <Link to={MainRoutes.HOME}>
           <img className='logo__image' src={logo} alt="Crisp Logo"/>
         </Link>
+      </div>
     )
 } 
 

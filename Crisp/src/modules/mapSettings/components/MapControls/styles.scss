@@ -3,8 +3,8 @@
 .map-controls {
     background-color: colors.$map-controls-light-background;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 0px;
+    left: 0px;
     z-index: 2000;
     border: 1px solid colors.$map-controls-light-background;
     border-top-right-radius: 24px;

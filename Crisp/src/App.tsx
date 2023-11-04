@@ -46,9 +46,9 @@ function App() {
     return (
       <>
         <Navbar />
-        <Toaster closeButton={true} richColors={true} />
         <Loader />
         <Outlet />
+        <Toaster closeButton={true} richColors={true} />
       </>
     );
   }
@@ -56,9 +56,9 @@ function App() {
   function LoginLayout() {
     return (
       <>
-        <Toaster closeButton={true} richColors={true} />
         <Outlet />
         <Loader />
+        <Toaster closeButton={true} richColors={true}/>
       </>
     );
   }

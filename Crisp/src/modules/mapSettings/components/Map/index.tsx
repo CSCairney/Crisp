@@ -16,7 +16,7 @@ const Map: React.FC = () => {
         zoom={7} 
         zoomControl={true}
         scrollWheelZoom={true}
-        style={{ width: "100vw", height: "100vh" }}>
+        style={{ width: "100%", height: "100%" }}>
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
         <MarkersGroup layers={markerLayers}/>
         <SearchBar />

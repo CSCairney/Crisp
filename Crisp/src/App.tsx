@@ -56,6 +56,7 @@ function App() {
   function LoginLayout() {
     return (
       <>
+        <Navbar />
         <Outlet />
         <Loader />
         <Toaster closeButton={true} richColors={true}/>

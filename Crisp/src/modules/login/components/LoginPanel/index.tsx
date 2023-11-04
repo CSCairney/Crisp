@@ -10,6 +10,8 @@ import { useNavigate } from "react-router";
 import { userInfo } from "../../types/users";
 import { loginUser } from "../../store/actions/login";
 import { toast } from "sonner";
+import { panelTypes } from "../../../common/constants/menu";
+import { setPanelOpenStatus } from "../../../common/store";
 
 const LoginPanel: React.FC = () => {
   const activePanel = useAppSelector(selectLoginViewMode);
@@ -30,6 +32,7 @@ const LoginPanel: React.FC = () => {
     const token = response.data.data.token;
     dispatch(loginUser(user, token));
     navigate("/");
+    dispatch(setPanelOpenStatus(panelTypes.Selection))
     toast.success('Login successful');
   };
   // Test

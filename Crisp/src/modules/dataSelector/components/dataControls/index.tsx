@@ -2,8 +2,7 @@ import React from "react";
 import "./styles.scss";
 import { useAppDispatch, useAppSelector } from "../../../../store";
 import { selectTempSelectedLayers } from "../../store/selectors/dataSelectors";
-import { setSelectedLayers } from "../../store";
-import { toast } from "sonner";
+import { applySelectedLayers, resetSelectedLayers } from "../../store/actions/controls";
 
 
 const DataControls: React.FC = () => {
@@ -11,20 +10,18 @@ const DataControls: React.FC = () => {
     const layerNames = useAppSelector(selectTempSelectedLayers);
 
     const applySelectedLayersHandler = () => {
-      dispatch(setSelectedLayers(layerNames));
-      toast.success('Layers applied');
-    };
+        dispatch(applySelectedLayers(layerNames));
+    }
 
     const resetSelectedLayersHandler = () => {
-        dispatch(setSelectedLayers([]));
-        toast.message('Layers Cleared');
-        };
+        dispatch(resetSelectedLayers());
+    }
 
     return (
         <>
         <div className='data-controls'>
-            <button className='data-controls__button--apply' onClick={() => applySelectedLayersHandler()}>Apply</button>
-            <button className='data-controls__button--reset' onClick={() => resetSelectedLayersHandler()}>Reset</button>
+            <button className='data-controls__button--apply' onClick={applySelectedLayersHandler}>Apply</button>
+            <button className='data-controls__button--reset' onClick={resetSelectedLayersHandler}>Reset</button>
         </div>
         </>
     );

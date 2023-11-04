@@ -34,13 +34,13 @@
     }
     &__results{
         position: fixed;
-        top:21%;
+        top:25%;
         background-color: white;
         @media (max-width: 768px) {
-            top: 26%;
+            top: 31%;
         }
         @media (max-width: 576px) {
-            top: 21%;
+            top: 25%;
         }
     }
 }

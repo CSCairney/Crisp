@@ -3,17 +3,17 @@
 .search-controls {
     background-color: colors.$search-controls-light-background;
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 0px;
     z-index: 2000;
     border: 1px solid colors.$search-controls-light-background;
     border-top-right-radius: 24px;
     border-bottom-right-radius: 24px;
     @media (max-width: 768px) {
-        top: 20%;
+        top: 25%;
     }
     @media (max-width: 576px) {
-        top: 15%;
+        top: 20%;
     }
     &--closed{
         @extend .search-controls;

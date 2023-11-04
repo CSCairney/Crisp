@@ -4,6 +4,7 @@ import teamReducer from "../src/modules/team/store";
 import userReducer from "../src/modules/login/store";
 import mapReducer from "../src/modules/mapSettings/store";
 import overlayReducer from "../src/modules/common/store";
+import dataReducer from "../src/modules/dataSelector/store";
 import { listenerMiddleware } from "./modules/common/services/listenersService";
 
 export function createStore(preloadedState = {}) {
@@ -13,7 +14,8 @@ export function createStore(preloadedState = {}) {
                 teamState: teamReducer,
                 userState: userReducer,
                 mapState: mapReducer,
-                overlayState: overlayReducer
+                overlayState: overlayReducer,
+                dataState: dataReducer,
             },
             middleware: (getDefaultMiddleware) =>
             getDefaultMiddleware().prepend(listenerMiddleware.middleware),

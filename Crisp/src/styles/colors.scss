@@ -28,7 +28,6 @@ $-yellow: #ffff00;
   */
 $application-background: $-dim-green;
 
-$loader-container: $-black;
 $loader-background: $-dim-green;
 $loader-foreground: $-white;
 $loader-foreground-alt: $-light-green;
@@ -40,6 +39,10 @@ $button-primary-text: $-white;
 $button-primary-background: $-light-green;
 $button-primary-border: $-light-green;
 $button-primary-hover: $-ocean;
+$button-primary-text-reset: $-white;
+$button-primary-background-reset: $-red;
+$button-primary-border-reset: $-red;
+$button-primary-hover-reset: $-red;
 
 $navigation-light-background: $-white;
 $navigation-light-background-hover: $-dim-green;
@@ -74,3 +77,5 @@ $search-result-border: $-dim-green;
 $map-controls-light-background: $-dim-green;
 $map-controls-light-buttons: $-white;
 $map-controls-light-buttons--hover: $-orange;
+
+$panel-light-container-background: $-white;

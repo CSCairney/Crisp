@@ -10,6 +10,7 @@ const teamSlice = createSlice({
         setUserState: (state, action: PayloadAction<userState>) => {
             state.user = action.payload.user;
             state.viewMode = action.payload.viewMode;
+            state.accessToken = action.payload.accessToken;
         },
         setUser: (state, action: PayloadAction<userInfo>) => {
             state.user = action.payload;

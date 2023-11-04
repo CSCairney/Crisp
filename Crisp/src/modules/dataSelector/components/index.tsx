@@ -1,18 +1,25 @@
 import React from "react";
-import { useAppSelector } from "../../../store";
-import { selectPanelStatus } from "../../common/store/selectors/menu";
-import { panelTypes } from "../../common/constants/menu";
 import "./styles.scss";
+import { useAppSelector } from "../../../store";
+import { selectDataLayers } from "../store/selectors/dataSelectors";
+import DataLayer from "./dataLayer";
+import DataControls from "./dataControls";
 
 const DataSelector: React.FC = () => {
-  const activePanel = useAppSelector(selectPanelStatus);
+  const dataLayerNames = useAppSelector(selectDataLayers);
+  
   return (
     <>
-      {activePanel === panelTypes.Selection ? (
         <div className='data-selector'>
-          <p className='data-selector__title'>This is a data selector</p>
+          <ul className="data-selector__list">
+          {dataLayerNames.map((layer) => (
+            <li key={layer.layer} className="data-selector__item-container">
+              <DataLayer layerDetails={layer} />
+            </li>
+          ))}
+          </ul>
+          <DataControls />
         </div>
-      ) : null}
     </>
   );
 };

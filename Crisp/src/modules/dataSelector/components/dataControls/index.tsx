@@ -3,6 +3,8 @@ import "./styles.scss";
 import { useAppDispatch, useAppSelector } from "../../../../store";
 import { selectTempSelectedLayers } from "../../store/selectors/dataSelectors";
 import { applySelectedLayers, resetSelectedLayers } from "../../store/actions/controls";
+import { setPanelOpenStatus } from "../../../common/store";
+import { panelTypes } from "../../../common/constants/menu";
 
 
 const DataControls: React.FC = () => {
@@ -11,6 +13,7 @@ const DataControls: React.FC = () => {
 
     const applySelectedLayersHandler = () => {
         dispatch(applySelectedLayers(layerNames));
+        dispatch(setPanelOpenStatus(panelTypes.None))
     }
 
     const resetSelectedLayersHandler = () => {

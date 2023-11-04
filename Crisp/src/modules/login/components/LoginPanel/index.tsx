@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { authenticationViewMode } from "../../contants/login";
-import PanelContainer from "../PanelContainer";
+import PanelContainer from "../AuthPanelContainer";
 import axios from 'axios';
 import "./styles.scss";
 import PanelToggle from "../PanelToggle";

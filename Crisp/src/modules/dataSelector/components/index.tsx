@@ -7,7 +7,6 @@ import DataControls from "./dataControls";
 
 const DataSelector: React.FC = () => {
   const dataLayerNames = useAppSelector(selectDataLayers);
-  console.table(dataLayerNames);
   
   return (
     <>

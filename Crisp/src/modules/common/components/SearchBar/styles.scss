@@ -1,20 +1,14 @@
 .search-bar {
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: fit-content;
     max-width: 200px;
     height: auto;
     z-index: 2000;
-    top: 83px;
 
     &__container {
         background-color: white;
-        border: 1px solid black;
-        border-top: 1px transparent !important;
-        border-bottom-right-radius: 10px;
     }
     &__form {
         padding: 5px;
@@ -36,6 +30,17 @@
     &__search{
         &:hover {
             cursor: pointer;
+        }
+    }
+    &__results{
+        position: fixed;
+        top:21%;
+        background-color: white;
+        @media (max-width: 768px) {
+            top: 26%;
+        }
+        @media (max-width: 576px) {
+            top: 21%;
         }
     }
 }

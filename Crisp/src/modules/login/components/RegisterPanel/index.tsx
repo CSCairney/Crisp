@@ -34,7 +34,7 @@ const RegisterPanel: React.FC = () => {
     };
   
     try {
-      const response = await axios.post('http://localhost:3000/signup', data);
+      const response = await axios.post('https://crisp-api-7bc2f4f0a358.herokuapp.com/signup', data);
       dispatch(setUser(response.data.data.user));
       dispatch(setUserJWT(response.data.data.token));
       dispatch(setViewMode(authenticationViewMode.LOGIN));

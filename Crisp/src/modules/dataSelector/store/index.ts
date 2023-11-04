@@ -6,7 +6,8 @@ export const {
     setTempSelectedLayers,
     setSelectedLayers,
     setDataLayers,
-    setDataState
+    setDataState,
+    toggleTempSelectedLayer
 } = dataSlice.actions;
 
 export default dataSlice.reducer;

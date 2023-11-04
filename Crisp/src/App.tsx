@@ -31,14 +31,14 @@ function App() {
   }, [dispatch]);
 
   useEffect(() => {
-    if (accessToken && selectedLayers) {
-      dispatch(fetchMarkerData(accessToken, selectedLayers));
+    if (accessToken) {
+      dispatch(fetchLayerNamesData(accessToken));
     }
   }, [accessToken, selectedLayers, dispatch]);
 
   useEffect(() => {
-    if (accessToken) {
-      dispatch(fetchLayerNamesData(accessToken));
+    if (accessToken && selectedLayers) {
+      dispatch(fetchMarkerData(accessToken, selectedLayers));
     }
   }, [accessToken, selectedLayers, dispatch]);
 

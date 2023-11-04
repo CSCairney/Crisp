@@ -1,4 +1,11 @@
 .data-selector{
     width: 100%;
     height: 100%;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 1fr;
+    &__list {
+        list-style: none;
+        overflow-y: scroll;
+    }
 }

@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { createInitialDataState } from "./dataState";
-import { dataState } from "../types/data";
+import { dataLayer, dataState } from "../types/data";
 
 const dataSlice = createSlice({
     name: "dataState",
@@ -22,8 +22,16 @@ const dataSlice = createSlice({
     setLoading: (state, action: PayloadAction<boolean>) => {
         state.isLoading = action.payload;
     },
-    setDataLayers: (state, action: PayloadAction<string[]>) => {
+    setDataLayers: (state, action: PayloadAction<dataLayer[]>) => {
         state.dataLayers = action.payload;
+    },
+    toggleTempSelectedLayer: (state, action: PayloadAction<string>) => {
+        const index = state.tempSelectedLayers.indexOf(action.payload);
+        if (index === -1) {
+        state.tempSelectedLayers.push(action.payload);
+        } else {
+        state.tempSelectedLayers.splice(index, 1);
+        }
     }
     }})
 

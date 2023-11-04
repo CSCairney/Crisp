@@ -8,18 +8,14 @@ import { useAppSelector } from "../../../../store";
 
 type LoaderProps = {
   type?: "Bar" | "Spinner";
-  loadingItemDetails?: string;
 };
 
-const Loader: React.FC<LoaderProps> = ({ type, loadingItemDetails }) => {
+const Loader: React.FC<LoaderProps> = ({ type }) => {
   const isLoading = useAppSelector(selectLoadingState);
   if (isLoading) return (
     <div className="loader" aria-label="loading">
       <div className="loader__container">
-        <p>
           {type === "Bar" ? <BarLoader /> : <CircularLoader />}
-          <strong className="loader__details">{loadingItemDetails}</strong>
-        </p>
       </div>
     </div>
   );

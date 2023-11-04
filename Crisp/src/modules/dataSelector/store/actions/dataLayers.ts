@@ -7,7 +7,7 @@ export const queryLayerNamesData = async (accessToken: string) => {
       Authorization: `Bearer ${accessToken}`,
     };
   
-    const response = await axios.get(`http://localhost:3000/layer/names`, { headers: headers });
+    const response = await axios.get(`http://localhost:3000/layer/`, { headers: headers });
     return response.data;
   };
   

@@ -4,8 +4,8 @@ import { MapContainer, TileLayer} from "react-leaflet";
 import MarkersGroup from "../MarkersGroup";
 import { useAppSelector } from "../../../../store";
 import { selectMarkerLayers } from "../../store/selectors/markers";
-import SearchBar from "../../../common/components/SearchBar";
 import MapControls from "../MapControls";
+import SearchControls from "../SearchControls";
 
 const Map: React.FC = () => {
   const markerLayers = useAppSelector(selectMarkerLayers);
@@ -19,7 +19,7 @@ const Map: React.FC = () => {
         style={{ width: "100%", height: "100%" }}>
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
         <MarkersGroup layers={markerLayers}/>
-        <SearchBar />
+        <SearchControls />
         <MapControls />
       </MapContainer>
     </div>

@@ -2,16 +2,17 @@
 
 .register-panel {
     &__container {
-        height: 60%;
-        width: 80%;
+        height: 80%;
+        width: 90%;
         display: grid;
-        grid-template-rows: 10% 90%;
+        gap: 20px;
+        grid-template-rows: 10% 80% 10%;
     }
     &__form {
-        height: 70%;
+        height: 100%;
         width: 100%;
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
         gap: 2px;
     }
     &__input {
@@ -20,6 +21,9 @@
     &__title {
         place-self: center;
         margin-bottom: 20px;
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
     }
 
     &__submit {
@@ -45,6 +49,16 @@
         :hover{
             transform: scale(1.04);
             background-color: colors.$button-primary-hover;
+        }
+    }
+    &__register-toggle{
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+    }
+    &__login-toggle-mobile{
+        @media (min-width: 769px) {
+            display: none !important;
         }
     }
 }

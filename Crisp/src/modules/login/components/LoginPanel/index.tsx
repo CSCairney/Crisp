@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { authenticationViewMode } from "../../contants/login";
-import PanelContainer from "../AuthPanelContainer";
+import AuthPanelContainer from "../AuthPanelContainer";
 import axios from 'axios';
 import "./styles.scss";
 import PanelToggle from "../PanelToggle";
@@ -36,7 +36,7 @@ const LoginPanel: React.FC = () => {
   return (
     <>
       {activePanel === "LOGIN" ? (
-        <PanelContainer position="left">
+        <AuthPanelContainer position="left">
           <div className='login-panel__container'>
             <h1 className='login-panel__title'>Login Panel</h1>
             <form className='login-panel__form' onSubmit={handleSubmit}>
@@ -46,10 +46,15 @@ const LoginPanel: React.FC = () => {
                 Login
               </button>
             </form>
+            <div className="login-panel__login-toggle-mobile">
+            <PanelToggle type={authenticationViewMode.REGISTER} content='Register' isMobile={true} />
+            </div>
           </div>
-        </PanelContainer>
+        </AuthPanelContainer>
       ) : (
-        <PanelToggle type={authenticationViewMode.LOGIN} content='Login Panel' />
+        <div className="login-panel__login-toggle">
+          <PanelToggle type={authenticationViewMode.LOGIN} content='Login' />
+        </div>
       )}
     </>
   );

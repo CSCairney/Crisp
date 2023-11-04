@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "../../../../store";
 import axios from 'axios';
 import { authenticationViewMode } from "../../contants/login";
-import PanelContainer from "../AuthPanelContainer";
+import AuthPanelContainer from "../AuthPanelContainer";
 import PanelToggle from "../PanelToggle";
 import "./styles.scss";
 import { selectLoginViewMode } from "../../store/selectors/login";
@@ -49,7 +49,7 @@ const RegisterPanel: React.FC = () => {
   return (
     <>
       {activePanel === "REGISTER" ? (
-        <PanelContainer position='right'>
+        <AuthPanelContainer position='right'>
           <div className='register-panel__container'>
             <h1 className='register-panel__title'>Register Panel</h1>
             <form className='register-panel__form' onSubmit={(e) => handleFormSubmit(e)}>
@@ -63,10 +63,15 @@ const RegisterPanel: React.FC = () => {
                 Register
               </button>
             </form>
+            <div className='register-panel__login-toggle-mobile'>
+            <PanelToggle type={authenticationViewMode.LOGIN} content='Login' isMobile={true}/>
+            </div>
           </div>
-        </PanelContainer>
+        </AuthPanelContainer>
       ) : (
-        <PanelToggle type={authenticationViewMode.REGISTER} content='Register Panel' />
+        <div className="register-panel__register-toggle">
+          <PanelToggle type={authenticationViewMode.REGISTER} content='Register' />
+        </div>
       )}
     </>
   );

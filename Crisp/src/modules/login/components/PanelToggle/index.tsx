@@ -5,22 +5,34 @@ import { useAppDispatch } from "../../../../store";
 import { setViewMode } from "../../store";
 
 type PanelToggleProps = {
-    type: authenticationViewMode;
-    content: "Login Panel" | "Register Panel";
-}
+  type: authenticationViewMode;
+  content: "Login" | "Register";
+  isMobile?: boolean;
+};
 
-const PanelToggle: React.FC<PanelToggleProps> = ({type, content}) => {
-    const dispatch = useAppDispatch();
+const PanelToggle: React.FC<PanelToggleProps> = ({ type, content, isMobile }) => {
+  const dispatch = useAppDispatch();
 
-    const toggleHandler = () => {
-        dispatch(setViewMode(type));
-    }
+  const toggleHandler = () => {
+    dispatch(setViewMode(type));
+  };
 
+  if (isMobile)
     return (
-            <div className="panel-toggle">
-                <button className="panel-toggle__button" onClick={toggleHandler}>{content}</button>
-            </div>
-    )
-}
+      <div className='panel-toggle'>
+        <button className='panel-toggle__button' onClick={toggleHandler}>
+          {content}
+        </button>
+      </div>
+    );
+  else
+    return (
+      <div className='panel-toggle'>
+        <button className='panel-toggle__button' onClick={toggleHandler}>
+          {content}
+        </button>
+      </div>
+    );
+};
 
 export default PanelToggle;

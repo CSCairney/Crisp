@@ -1,8 +1,9 @@
 import React from "react";
 import { dataLayer } from "../../types/data";
 import "./styles.scss";
-import { useAppDispatch } from "../../../../store";
+import { useAppDispatch, useAppSelector } from "../../../../store";
 import { toggleTempSelectedLayer } from "../../store";
+import { selectIsLayerNameSelected } from "../../store/selectors/dataSelectors";
 
 export type DataLayerProps = {
   layerDetails: dataLayer;
@@ -10,6 +11,7 @@ export type DataLayerProps = {
 
 const DataLayer: React.FC<DataLayerProps> = ({ layerDetails }) => {
     const dispatch = useAppDispatch();
+    const isChecked = useAppSelector(selectIsLayerNameSelected(layerDetails.layer));
 
   const layerCheckboxHandler = (layerName: string) => {
     dispatch(toggleTempSelectedLayer(layerName));
@@ -18,7 +20,7 @@ const DataLayer: React.FC<DataLayerProps> = ({ layerDetails }) => {
   return (
     <div className='data-layer'>
       <div className='data-layer__checkbox-container'>
-        <input className="data-layer__checkbox-input" type='checkbox' value={layerDetails.layer} onChange={() => layerCheckboxHandler(layerDetails.layer)} />
+        <input checked={isChecked} className="data-layer__checkbox-input" type='checkbox' value={layerDetails.layer} onChange={() => layerCheckboxHandler(layerDetails.layer)} />
       </div>
       <div className='data-layer__body'>
         <ul className="data-layer__primary-list">

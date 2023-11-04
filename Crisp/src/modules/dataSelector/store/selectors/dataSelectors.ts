@@ -39,5 +39,13 @@ export const selectSelectedLayers = createSelector(
     }
 );
 
+export const selectIsLayerNameSelected = (layer: string) => createSelector(
+    [selectTempSelectedLayers],
+    (layers) => {
+        return layers.includes(layer);
+    }
+);
+
+
 
 

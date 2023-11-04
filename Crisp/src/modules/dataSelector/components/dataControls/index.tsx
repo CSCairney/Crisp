@@ -23,8 +23,8 @@ const DataControls: React.FC = () => {
     return (
         <>
         <div className='data-controls'>
-            <button className='data-controls__button' onClick={() => applySelectedLayersHandler()}>Apply</button>
-            <button className='data-controls__button' onClick={() => resetSelectedLayersHandler()}>Reset</button>
+            <button className='data-controls__button--apply' onClick={() => applySelectedLayersHandler()}>Apply</button>
+            <button className='data-controls__button--reset' onClick={() => resetSelectedLayersHandler()}>Reset</button>
         </div>
         </>
     );

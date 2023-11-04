@@ -1,4 +1,29 @@
+@use "src/styles/colors";
+
 .data-controls {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    gap: 5px;
+    &__button{
+        &--apply{
+            background-color: #2C6566;
+            color: colors.$button-primary-text;
+            border: 1px solid #2C6566;
+            &:hover{
+                background-color: colors.$button-primary-background;
+                border: 1px solid colors.$button-primary-border;
+                cursor: pointer;
+            }
+        }
+        &--reset{
+            background-color: gray;
+            color: colors.$button-primary-text-reset;
+            border: 1px solid gray;
+            &:hover{
+                background-color: colors.$button-primary-hover-reset;
+                border: 1px solid colors.$button-primary-border-reset;
+                cursor: pointer;
+            }
+        }
+    }
 }

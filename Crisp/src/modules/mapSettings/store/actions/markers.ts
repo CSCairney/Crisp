@@ -8,7 +8,7 @@ export const queryMarkerData = async (accessToken: string, layerName: string) =>
     Authorization: `Bearer ${accessToken}`,
   };
 
-  const response = await axios.get(`http://localhost:3000/layer/${layerName}`, { headers: headers });
+  const response = await axios.get(`https://crisp-api-7bc2f4f0a358.herokuapp.com/layer/${layerName}`, { headers: headers });
   return response.data;
 };
 

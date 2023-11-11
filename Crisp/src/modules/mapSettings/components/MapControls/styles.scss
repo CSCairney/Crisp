@@ -5,7 +5,7 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
-    z-index: 2000;
+    z-index: 2000; /* Needs to be 2000 to overlay inside the map container */
     border: 1px solid colors.$map-controls-light-background;
     border-top-right-radius: 24px;
     border-bottom-right-radius: 24px;

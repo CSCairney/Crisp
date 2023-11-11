@@ -1,0 +1,32 @@
+@use "src/styles/colors";
+
+.external-link-button{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: colors.$button-secondary-button-background;
+    color: colors.$button-secondary-button-text;
+    text-align: center;
+    &:hover{
+        background-color: colors.$button-secondary-button-hover;
+    }
+    &--small{
+        @extend .external-link-button;
+        width:50px;
+        padding: 5px;
+        height: fit-content;
+    }
+    &--medium{
+        @extend .external-link-button;
+        width:100px;
+        padding: 10px;
+        height: fit-content;
+    }
+    &--large{
+        @extend .external-link-button;
+        width:150px;
+        padding: 15px;
+        height: fit-content;
+    }
+}

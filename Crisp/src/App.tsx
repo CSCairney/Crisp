@@ -9,6 +9,7 @@ import { Toaster } from "sonner";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Navbar from "./modules/common/components/Navbar";
+import "./app.scss";
 
 // TODO - Create a loader for APP suspense
 function App() {
@@ -16,10 +17,18 @@ function App() {
   function BasicLayout() {
     return (
       <>
-        <Navbar />
+      <div className="app">
+        <div className="app__header">
+          <Navbar />
+        </div>
+        <div className="app__content">
+          <Outlet />
+        </div>
+      </div>
+      <div className="app__overlay">
         <Loader />
-        <Outlet />
         <Toaster closeButton={true} richColors={true} />
+      </div>
       </>
     );
   }
@@ -27,10 +36,18 @@ function App() {
   function LoginLayout() {
     return (
       <>
-        <Navbar />
-        <Outlet />
+      <div className="app">
+        <div className="app__header">
+          <Navbar />
+        </div>
+        <div className="app__content">
+          <Outlet />
+        </div>
+      </div>
+      <div className="app__overlay">
         <Loader />
-        <Toaster closeButton={true} richColors={true}/>
+        <Toaster closeButton={true} richColors={true} />
+      </div>
       </>
     );
   }

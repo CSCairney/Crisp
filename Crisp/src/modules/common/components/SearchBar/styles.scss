@@ -34,13 +34,7 @@
     }
     &__results{
         position: fixed;
-        top:25%;
+        z-index: 2001;
         background-color: white;
-        @media (max-width: 768px) {
-            top: 31%;
-        }
-        @media (max-width: 576px) {
-            top: 25%;
-        }
     }
 }

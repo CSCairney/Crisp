@@ -6,4 +6,9 @@
     background-color: colors.$contact-light-panel-container-background;
     -webkit-box-shadow: 4px 3px 12px 0px #000000; 
     box-shadow: 4px 3px 12px 0px #000000;
+    
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 5%;
 }

@@ -8,7 +8,20 @@
     box-shadow: 4px 3px 12px 0px #000000;
 
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
     grid-template-columns: 1fr;
     padding: 5%;
+    &__image{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        background-color: red;
+        place-items: center;
+    }
+    &__content{
+        background-color: blue;
+    }
+    &__link{
+        background-color: green;
+    }
 }

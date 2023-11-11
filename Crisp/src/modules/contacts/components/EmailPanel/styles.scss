@@ -1,0 +1,9 @@
+@use "src/styles/colors";
+
+.email-panel{
+    width: 100%;
+    height:100%;
+    background-color: colors.$contact-light-panel-container-background;
+    -webkit-box-shadow: 4px 3px 12px 0px #000000; 
+    box-shadow: 4px 3px 12px 0px #000000;
+}

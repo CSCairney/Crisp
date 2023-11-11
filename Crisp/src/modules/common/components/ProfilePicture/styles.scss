@@ -1,0 +1,27 @@
+.profile-picture{
+    border-radius: 50%;
+    &--small{
+        @extend .profile-picture;
+        width:50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    &--medium{
+        @extend .profile-picture;
+        width:75px;
+        height: 75px;
+        object-fit: cover;
+    }
+    &--large{
+        @extend .profile-picture;
+        width:100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    &--full{
+        @extend .profile-picture;
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

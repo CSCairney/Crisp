@@ -1,0 +1,23 @@
+@use "src/styles/colors";
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto(1fr);
+    width: 80%;
+
+    &__submit {
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: colors.$button-secondary-button-background;
+        color: colors.$button-secondary-button-text;
+        text-align: center;
+        margin-top: 15px;
+
+        &:hover {
+            background-color: colors.$button-secondary-button-hover;
+        }
+    }
+}

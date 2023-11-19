@@ -1,0 +1,1 @@
+export const OurStoryContent = "Crisp was founded in 2023 by a team of passionate individuals with a shared love for exploration and technology. Our co-founders, John Doe and Jane Smith, envisioned a platform that seamlessly combines geographical coordinates with observation data to create an immersive and user-friendly experience."

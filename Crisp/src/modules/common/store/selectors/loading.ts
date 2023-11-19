@@ -1,6 +1,6 @@
 import { createSelector } from "@reduxjs/toolkit";
 
-import { RootState } from "~/store";
+import { RootState } from "../../../../store";
 
 export const selectLoadingDataState = (state: RootState) =>
   state.dataState.isLoading;

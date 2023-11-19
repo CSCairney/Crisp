@@ -9,6 +9,7 @@ $-less-dim-green: #327375;
 $-light-green: #449342;
 $-ocean: #C1F6ED;
 $-light-grey: #ECECEC;
+$-sand: #FFF8EE;
 
 // Marker Colours
 $-burgandy: #800000;
@@ -86,3 +87,8 @@ $panel-light-container-background: $-white;
 $contact-light-container-background: $-dim-green;
 $contact-light-sidebar-container-background: $-light-grey;
 $contact-light-panel-container-background: $-white;
+
+$about-light-background: $-sand;
+$about-light-value-icon-background:$-dim-green;
+$about-light-value-icon-background-hover:$-less-dim-green;
+$about-light-value-icon:$-light-grey;

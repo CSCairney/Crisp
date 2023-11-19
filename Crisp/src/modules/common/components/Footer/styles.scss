@@ -9,10 +9,13 @@
     background-color: colors.$footer-light-background;
     &__social-media{
         display: grid;
-        grid-template-columns: repeat(5, minmax(15px, 20%));
+        grid-template-columns: repeat(9, minmax(15px, 11%));
         place-items: center;
-        width: 100%;
+        width: 80%;
         height: 100%;
+        @media (max-width: 768px){
+            grid-template-columns: repeat(5, minmax(15px, 20%));
+        }
     }
     &__social-media-icon{
         font-size: 40px;
@@ -20,6 +23,14 @@
         &:hover{
             color: colors.$footer-light-icon-hover;
             cursor: pointer;
+        }
+    }
+    &__social-media-icon-separator{
+        font-size: 30px;
+        rotate: 60deg;
+        color: colors.$footer-light-icon-separator;
+        @media (max-width: 768px){
+            display: none;
         }
     }
     &__logo{

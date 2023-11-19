@@ -1,0 +1,38 @@
+@use "src/styles/colors";
+
+.value{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+    place-items: center;
+    &__icon{
+        background-color: colors.$about-light-value-icon-background;
+        color:colors.$about-light-value-icon;
+        font-size: 3rem;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+        &:hover{
+            background-color: colors.$about-light-value-icon-background-hover;
+            cursor: pointer;
+        }
+    }
+    &__icon-container{
+        width:fit-content;
+        height: fit-content;
+        justify-self: center;
+        text-align: center;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: colors.$about-light-value-icon-background;
+        color:colors.$about-light-value-icon;
+        &:hover{
+            background-color: colors.$about-light-value-icon-background-hover;
+            cursor: pointer;
+        }
+    }
+    &__content{
+        justify-self: flex-start;
+        align-self: center;
+    }
+}

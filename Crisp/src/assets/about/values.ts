@@ -1,7 +1,8 @@
+import { Value } from "../../modules/about/types/value";
 import { Values } from "../../modules/about/constants/values";
 
 
-export const OurValues = [{
+export const OurValuesContent: Value[] = [{
     value: Values.Accessibility,
     statement: "We believe knowledge should be accessible to everyone."
 },

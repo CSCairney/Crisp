@@ -4,10 +4,11 @@ import { SiCreatereactapp } from "react-icons/si";
 import { TbBuildingCommunity } from "react-icons/tb";
 import { GiStrongMan } from "react-icons/gi";
 import { Values } from "../../constants/values";
+import "./styles.scss";
 
 
 type ValueProps = {
-    value: Values;
+    value: string;
     statement: string;
 }
 
@@ -16,13 +17,13 @@ const Value:React.FC<ValueProps> = ({value, statement}) => {
     const valueHelper = (valueType: string = value) => {
         switch (valueType) {
             case Values.Accessibility:
-                return <LuAccessibility />;
+                return <LuAccessibility className="value__icon" />;
             case Values.Community:
-                return <TbBuildingCommunity />;
+                return <TbBuildingCommunity className="value__icon" />;
             case Values.Innovation:
-                return <SiCreatereactapp />;
+                return <SiCreatereactapp className="value__icon" />;
             case Values.Integrity:
-                return <GiStrongMan />;
+                return <GiStrongMan className="value__icon" />;
             default:
                 return <p>Error Loading Value</p>;
         }
@@ -30,9 +31,11 @@ const Value:React.FC<ValueProps> = ({value, statement}) => {
 
     return (
         <div className="value">
-            <div className="value__icon">{valueHelper(value)}</div>
-            <h4 className="value__title">{value}</h4>
-            <p className="value__statement">{statement}</p>
+            <div className="value__icon-container">{valueHelper(value)}</div>
+            <div className="value__content">
+                <h3 className="value__title"><strong>{value}</strong></h3>
+                <p className="value__statement">{statement}</p>
+            </div>
         </div>
     )
 }

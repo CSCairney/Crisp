@@ -22,7 +22,7 @@ const OurValues:React.FC = () => {
             </div>
             <div className="our-values__content">
                 {OurValuesContent.map((type) => {
-                    return (<Value value={type.value} statement={type.statement} />)
+                    return (<Value key={type.value} value={type.value} statement={type.statement} />)
                 })}
             </div>
         </div>

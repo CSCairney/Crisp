@@ -4,6 +4,7 @@
 $-red: #f70000;
 $-white: #ffffff;
 $-black: #000000;
+$-dim-black: #333333;
 $-dim-green: #2C6566;
 $-less-dim-green: #327375;
 $-light-green: #449342;
@@ -52,6 +53,13 @@ $navigation-light-button-hover: $-less-dim-green;
 $navigation-light-button-text: $-white;
 $navigation-light-user-info-button-background: $-white;
 $navigation-light-user-info-button-text: $-black;
+
+$footer-light-background: $-dim-black;
+$footer-light-text: $-white;
+$footer-light-text-hover: $-less-dim-green;
+$footer-light-icon: $-black;
+$footer-light-icon-hover: $-white;
+$footer-light-icon-separator: $-orange;
 
 $tooltip-primary-background: $-light-green;
 $tooltip-primary-text: $-black;

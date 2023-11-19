@@ -1,6 +1,6 @@
 import { createListenerMiddleware, isAnyOf } from "@reduxjs/toolkit";
 import { settingsPersistenceService } from "../localStorage/persistence";
-import { RootState } from "~/store";
+import { RootState } from "../../../store";
 import { clearUser, setUser, setUserJWT, setUserState, setViewMode } from "../../login/store";
 import { setLinesLoading, setMarkersLoading, setPolygonsLoading } from "../../mapSettings/store";
 import { setSelectedLayers, setDataLayers, setTempSelectedLayers, toggleTempSelectedLayer } from "../../dataSelector/store";

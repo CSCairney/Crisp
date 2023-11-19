@@ -1,7 +1,8 @@
-import { OurStoryContent } from "../../assets/about/information";
 import Header from "../../modules/about/components/Header";
-import OurValues from "../../modules/about/components/OurValues";
 import Title from "../../modules/about/components/Title";
+import OurValues from "../../modules/about/components/OurValues";
+import { OurStoryContent } from "../../assets/about/information";
+import "./styles.scss";
 
 const About = () => {
     return (

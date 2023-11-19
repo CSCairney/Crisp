@@ -1,4 +1,4 @@
-import Header from "../../modules/about/components/Header/index.tsx";
+import Header from "../../modules/about/components/header/index.tsx";
 import Title from "../../modules/about/components/Title/index.tsx";
 import OurValues from "../../modules/about/components/OurValues/index.tsx";
 import { OurStoryContent } from "../../assets/about/information";

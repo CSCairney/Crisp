@@ -13,11 +13,11 @@
     gap: 38px;
 
     // Media query for 768 pixels or more
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         left: 50%;
         top: 50%;
         bottom: 50%;
-        height: 90%;
+        height: max-content;
         width: 90%;
         transform: translate(-50%, -50%);
         grid-template-rows: repeat(2, 1fr);

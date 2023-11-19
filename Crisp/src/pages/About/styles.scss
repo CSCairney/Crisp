@@ -1,0 +1,13 @@
+@use "src/styles/colors";
+
+.about-us{
+    width: 100%;
+    height: fit-content;
+    background-color: colors.$about-light-background;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: min-content 1fr 3fr;
+    margin-top: 0;
+    padding-bottom: 2%;
+}

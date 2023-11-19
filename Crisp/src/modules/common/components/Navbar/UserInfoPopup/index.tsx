@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.scss";
-import { userInfo } from "~/login/types/users";
+import { userInfo } from "../../../../login/types/users";
 import { useAppDispatch, useAppSelector } from "../../../../../store";
 import { logoutUser } from "../../../../login/store/actions/login";
 import { selectAccessToken } from "../../../../login/store/selectors/login";

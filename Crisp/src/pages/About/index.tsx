@@ -1,8 +1,10 @@
+import Header from "../../modules/about/components/header";
+
 const About = () => {
     return (
-        <div>
-            <h1>About Page</h1>
-        </div>
+        <>
+            <Header />
+        </>
     )
 }
 

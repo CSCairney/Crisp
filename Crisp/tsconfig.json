@@ -28,10 +28,13 @@
 
     "baseUrl": "./",
     "paths": {
+      "~/*": ["./src/*"],
       "~/test/*": ["./test/*"],
       "~/store": ["./src/store.ts"],
+      "~/modules/*": ["./src/modules/*"],
+      "~/pages/*": ["./src/pages/*"],
+      "~/styles/*": ["./src/styles/*"],
       "~/assets/*": ["./src/assets/*"],
-      "~/*": ["./src/modules/*"]
     }
   },
   "include": ["src"],

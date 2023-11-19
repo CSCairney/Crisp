@@ -1,0 +1,12 @@
+@use "src/styles/colors";
+
+.about-us{
+    width: 100%;
+    height: fit-content;
+    background-color: colors.$about-light-background;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 1fr 0.25fr;
+    margin-top: 0;
+}

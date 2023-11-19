@@ -3,11 +3,20 @@
 .footer{
     display: grid;
     height: 100%;
+    width: 100%;
     min-height: 300px;
     grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 1fr;
     place-items: center;
     background-color: colors.$footer-light-background;
+    &__body {
+        display: grid;
+        width: 80%;
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        place-items: center;
+    }
     &__social-media{
         display: grid;
         grid-template-columns: repeat(9, minmax(15px, 11%));

@@ -2,13 +2,19 @@
 
 .value{
     display: grid;
+    height: fit-content;
     grid-template-columns: 25% 75%;
     grid-template-rows: 1fr;
     place-items: center;
+    @media (max-width: 768px){
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+    }
     &__icon{
         background-color: colors.$about-light-value-icon-background;
         color:colors.$about-light-value-icon;
-        font-size: 3rem;
+        font-size: 40px;
         text-align: center;
         align-self: center;
         justify-self: center;
@@ -34,5 +40,15 @@
     &__content{
         justify-self: flex-start;
         align-self: center;
+        @media (max-width: 768px){
+            justify-self: center;
+        }
+    }
+
+    &__title{
+        font-size: 2rem;
+    }
+    &__statement{
+        font-size: 1rem;
     }
 }

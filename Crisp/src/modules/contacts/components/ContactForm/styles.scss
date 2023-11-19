@@ -3,11 +3,24 @@
 .contact-form {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto(1fr);
+    grid-template-rows: 20% 20% 40% 20%;
+    gap: 10px;
     width: 80%;
+    @media (max-width: 768px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+        width: 100%;
+    }
 
     &__submit {
+        align-self: center;
+        justify-self: center;
         border-radius: 10px;
+        height: 40px;
+        width: 100px;
+        box-shadow: none;
+        border: none;
         display: flex;
         align-items: center;
         justify-content: center;

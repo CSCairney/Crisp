@@ -1,6 +1,6 @@
-import Header from "../../modules/about/components/Header";
-import Title from "../../modules/about/components/Title";
-import OurValues from "../../modules/about/components/OurValues";
+import Header from "../../modules/about/components/Header/index.tsx";
+import Title from "../../modules/about/components/Title/index.tsx";
+import OurValues from "../../modules/about/components/OurValues/index.tsx";
 import { OurStoryContent } from "../../assets/about/information";
 import "./styles.scss";
 

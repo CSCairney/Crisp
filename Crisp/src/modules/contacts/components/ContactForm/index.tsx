@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
       <input type="text" name="user_name" placeholder='username' />
       <input type="email" name="user_email" placeholder='email' />
       <textarea name="message" placeholder='feedback' />
-      <input type="submit" value="Submit" className='contact-form__submit' />
+      <input type="submit" value="Submit" className='contact-form__submit' data-testid="submit-button" />
     </form>
   );
 };

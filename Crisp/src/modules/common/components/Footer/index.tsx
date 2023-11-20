@@ -9,11 +9,9 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { TbBackslash } from "react-icons/tb";
+import { socialMediaHandler } from "../../helpers/footer";
 
 const Footer: React.FC = () => {
-  const socialMediaHandler = (socialMedia: string) => {
-    window.open(`${socialMedia}`, "_blank");
-  };
 
   return (
     <footer className="footer">

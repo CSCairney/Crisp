@@ -24,7 +24,7 @@ const UserArea: React.FC = () => {
     return (
         <div className='user-area__login'>
           <Tooltip theme={TooltipThemes.Light} isInteractive tooltipContent={<UserInfoPopup user={activeUserStatus} />} >
-          <button className='user-area__login--link' onClick={() => setUserVisible(!userVisible)}>
+          <button aria-label="user area toggle" className='user-area__login--link' onClick={() => setUserVisible(!userVisible)}>
             <BiUserCircle className='user-area__login--icon' />
           </button>
           </Tooltip>

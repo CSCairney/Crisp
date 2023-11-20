@@ -12,7 +12,6 @@ describe("PanelsContainer Component", () => {
       </BrowserRouter>
     );
     // Act
-    screen.logTestingPlaygroundURL();
     const developerName = screen.getByRole("heading", {
       name: /charles cairney/i,
     });

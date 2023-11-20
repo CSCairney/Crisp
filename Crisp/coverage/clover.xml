@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1700476067978" clover="3.2.0">
-  <project timestamp="1700476067978" name="All files">
-    <metrics statements="171" coveredstatements="170" conditionals="13" coveredconditionals="12" methods="6" coveredmethods="6" elements="190" coveredelements="188" complexity="0" loc="171" ncloc="171" packages="7" files="7" classes="7"/>
+<coverage generated="1700479353912" clover="3.2.0">
+  <project timestamp="1700479353913" name="All files">
+    <metrics statements="209" coveredstatements="203" conditionals="15" coveredconditionals="14" methods="8" coveredmethods="8" elements="232" coveredelements="225" complexity="0" loc="209" ncloc="209" packages="8" files="8" classes="8"/>
     <package name="assets.about">
       <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="values.ts" path="C:\Users\charl.DESKTOP-ONUUDC3\Documents\github\Crisp\Crisp\src\assets\about\values.ts">
@@ -213,6 +213,50 @@
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="modules.contacts.components.ContactForm">
+      <metrics statements="38" coveredstatements="33" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="C:\Users\charl.DESKTOP-ONUUDC3\Documents\github\Crisp\Crisp\src\modules\contacts\components\ContactForm\index.tsx">
+        <metrics statements="38" coveredstatements="33" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
       </file>
     </package>
   </project>

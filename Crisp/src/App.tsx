@@ -22,7 +22,9 @@ function App() {
           <Navbar />
         </div>
         <div className="app__content">
-          <Outlet />
+          <Suspense fallback={<Loader />}>
+            <Outlet />
+          </Suspense>
         </div>
       </div>
       <div className="app__overlay">
@@ -41,7 +43,9 @@ function App() {
           <Navbar />
         </div>
         <div className="app__content">
-          <Outlet />
+          <Suspense fallback={<Loader />}>
+            <Outlet />
+          </Suspense>
         </div>
       </div>
       <div className="app__overlay">

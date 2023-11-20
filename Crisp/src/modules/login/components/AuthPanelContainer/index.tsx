@@ -3,15 +3,13 @@ import "./styles.scss";
 import "../../../../styles/animations.scss"
 
 type AuthPanelContainerProps = {
-  position: "left" | "right";
   children: React.ReactNode;
 };
 
-const AuthPanelContainer: React.FC<AuthPanelContainerProps> = ({ position, children }) => {
-    const positionClass = `auth-panel-container--${position}${position === "left" ? " slide-right" : " slide-left"}`;
+const AuthPanelContainer: React.FC<AuthPanelContainerProps> = ({ children }) => {
   return (
     <>
-      <div className={`auth-panel-container ${positionClass}`}>{children}</div>
+      <div className="auth-panel-container">{children}</div>
     </>
   );
 };

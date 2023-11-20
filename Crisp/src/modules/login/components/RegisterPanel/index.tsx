@@ -49,7 +49,7 @@ const RegisterPanel: React.FC = () => {
   return (
     <>
       {activePanel === "REGISTER" ? (
-        <AuthPanelContainer position='right'>
+        <AuthPanelContainer>
           <div className='register-panel__container'>
             <h1 className='register-panel__title'>Register Panel</h1>
             <form className='register-panel__form' onSubmit={(e) => handleFormSubmit(e)}>

@@ -7,6 +7,7 @@ import type { RootState } from "../../src/store";
 
 import { mockStoreData } from "../mocks";
 import { createTestStore } from "./store";
+import React from "react";
 
 type RenderWithStoreOptions = RenderOptions & {
   state?: Partial<RootState>;

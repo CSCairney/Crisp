@@ -12,7 +12,6 @@ describe("EmailPanel Component", () => {
       </BrowserRouter>
     );
     // Act
-    screen.logTestingPlaygroundURL();
     const picture = screen.getByRole("img", {
       name: /developer picture/i,
     });

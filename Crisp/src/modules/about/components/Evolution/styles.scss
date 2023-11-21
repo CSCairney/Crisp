@@ -1,0 +1,21 @@
+.evolution{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    gap:10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    &__main{
+        font-size: 2rem;
+        text-align: center;
+        text-decoration: solid;
+        color:#327375;
+    }
+    &__content{
+        font-size: 1rem;
+        text-align: center;
+    }
+}

@@ -30,7 +30,7 @@ Fork the Crisp repository to your GitHub account.
 Clone your forked repository to your local machine:
 ```bash
 Copy code
-git clone https://github.com/your-username/crisp.git
+git clone git@github.com:CSCairney/Crisp.git
 ```
 
 ### Create a Branch:

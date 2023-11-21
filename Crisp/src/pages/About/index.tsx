@@ -1,4 +1,3 @@
-import Header from "../../modules/about/components/Header/index.tsx";
 import Title from "../../modules/about/components/Title/index.tsx";
 import OurValues from "../../modules/about/components/OurValues/index.tsx";
 import { OurStoryContent } from "../../assets/about/information";
@@ -9,6 +8,7 @@ import Evolution from "../../modules/about/components/Evolution/index.tsx";
 import { evolutionContent } from "../../assets/about/information";
 import Testimonals from "../../modules/about/components/Testimonals/index.tsx";
 import { testimonialsInformation } from "../../assets/about/testimonials.ts";
+import AboutHeader from "../../modules/about/components/AboutHeader/index.tsx";
 
 const About = () => {
   return (
@@ -20,7 +20,7 @@ const About = () => {
         type="website"
       />
       <div className="about-us">
-        <Header />
+        <AboutHeader />
         <Title
           title="About Us"
           alt="About us title"

@@ -3,7 +3,7 @@ import "./styles.scss";
 import HeaderBackground from "../../../../assets/about/HeaderBackground.jpg";
 import ExternalLinkButton from "../../../common/components/ExternalLinkButton";
 
-const Header: React.FC = () => {
+const AboutHeader: React.FC = () => {
   return (
     <>
       <header className="header">
@@ -37,4 +37,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default AboutHeader;

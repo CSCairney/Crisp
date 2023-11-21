@@ -9,6 +9,7 @@ import { getPersistedDataSettings } from "../../modules/dataSelector/store/actio
 import { selectSelectedLayers } from "../../modules/dataSelector/store/selectors/dataSelectors";
 import { fetchLayerNamesData } from "../../modules/dataSelector/store/actions/dataLayers";
 import { useEffect } from "react";
+import Seo from "../../modules/common/components/Seo";
 
 const Home = () => {
   const accessToken = useAppSelector(selectAccessToken);
@@ -34,6 +35,7 @@ const Home = () => {
   }, [accessToken, selectedLayers, dispatch]);
   return (
     <>
+      <Seo title="Crisp | Homepage" description="Homepage of the Crisp weather app, here you can use the dynamic map to explore data!" name="Github: CSCairney" type="website" />
       <Map />
       <PanelContainer />
     </>

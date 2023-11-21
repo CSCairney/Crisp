@@ -7,7 +7,7 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-rows: repeat(auto-fill, min-content);
     gap: 5%;
     margin-top: 0;
 }

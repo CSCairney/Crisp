@@ -1,0 +1,25 @@
+@use "src/styles/colors";
+
+.testimonials {
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%); /* Default case: 3 columns */
+    align-self: center;
+    justify-self: center;
+    align-content: center;
+    justify-content: center;
+    gap:5%;
+  
+    @media (max-width: 768px) { /* Wrap to 2 columns */
+      grid-template-columns: repeat(2, 40%);
+      align-self: center;
+      justify-self: center;
+    }
+  
+    @media (max-width: 576px) { /* Wrap to 1 column */
+      grid-template-columns: repeat(1, 90%);
+      align-self: center;
+      justify-self: center;
+    }
+  }

@@ -13,7 +13,7 @@ const PanelContainer: React.FC = () => {
     if (activePanel !== panelTypes.None) return (
         <div className='panel-container'>
             <div className='panel-container__header'>
-                <p className='panel-container__title'>{title}</p>
+                <p className='panel-container__title'><strong>{title}</strong></p>
             </div>
             <div className='panel-container__body'>
                 {(activePanel === panelTypes.Selection) && <DataSelector />}

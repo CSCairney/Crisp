@@ -34,4 +34,9 @@
         height: 100%;
         overflow: auto;
     }
+    &__header{
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid colors.$panel-light-container-border;
+    }
 }

@@ -7,19 +7,19 @@ When creating branches for your contributions, please adhere to the following na
 ### Bugfix: Use the following format for bugfix branches:
 ```sql
 Copy code
-bugfix/[insert GitHub name]-describe-changes-in-short-here
+bugfix/[Jira Ticket number]-[insert GitHub name]-describe-changes-in-short-here
 ```
 
 ### Feature: Use the following format for feature branches:
 ```sql
 Copy code
-feature/[insert GitHub name]-describe-changes-in-short-here
+feature/[Jira Ticket number]-[insert GitHub name]-describe-changes-in-short-here
 ```
 
 ### Enhancement: Use the following format for enhancement branches:
 ```sql
 Copy code
-enhancement/[insert GitHub name]-describe-changes-in-short-here
+enhancement/[Jira Ticket number]-[insert GitHub name]-describe-changes-in-short-here
 ```
 
 ## Contribution Process
@@ -37,7 +37,7 @@ git clone https://github.com/your-username/crisp.git
 Create a new branch for your contribution:
 ```bash
 Copy code
-git checkout -b bugfix/your-github-name-describe-changes
+git checkout -b bugfix/[Jira Ticket number]-your-github-name-describe-changes
 ```
 
 ### Make Changes:
@@ -57,7 +57,7 @@ git commit -m "Brief description of the changes made"
 Push your branch to your forked repository:
 ```bash
 Copy code
-git push origin bugfix/your-github-name-describe-changes
+git push origin bugfix/[Jira Ticket number]-your-github-name-describe-changes
 ```
 
 ### Create Pull Request (PR):

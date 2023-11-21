@@ -5,11 +5,11 @@ import About from "./pages/About";
 import { Suspense } from "react";
 import Loader from "./modules/common/components/Loader";
 import Login from "./pages/Login";
-import { Toaster } from "sonner";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Navbar from "./modules/common/components/Navbar";
 import "./app.scss";
+import { Toaster } from "sonner";
 
 // TODO - Create a loader for APP suspense
 function App() {
@@ -17,20 +17,20 @@ function App() {
   function BasicLayout() {
     return (
       <>
-      <div className="app">
-        <div className="app__header">
-          <Navbar />
+        <div className="app">
+          <div className="app__header">
+            <Navbar />
+          </div>
+          <div className="app__content">
+            <Suspense fallback={<Loader />}>
+              <Outlet />
+            </Suspense>
+          </div>
         </div>
-        <div className="app__content">
-          <Suspense fallback={<Loader />}>
-            <Outlet />
-          </Suspense>
+        <div className="app__overlay">
+          <Loader />
+          <Toaster closeButton={true} richColors={true} />
         </div>
-      </div>
-      <div className="app__overlay">
-        <Loader />
-        <Toaster closeButton={true} richColors={true} />
-      </div>
       </>
     );
   }
@@ -38,20 +38,20 @@ function App() {
   function LoginLayout() {
     return (
       <>
-      <div className="app">
-        <div className="app__header">
-          <Navbar />
+        <div className="app">
+          <div className="app__header">
+            <Navbar />
+          </div>
+          <div className="app__content">
+            <Suspense fallback={<Loader />}>
+              <Outlet />
+            </Suspense>
+          </div>
         </div>
-        <div className="app__content">
-          <Suspense fallback={<Loader />}>
-            <Outlet />
-          </Suspense>
+        <div className="app__overlay">
+          <Loader />
+          <Toaster closeButton={true} richColors={true} />
         </div>
-      </div>
-      <div className="app__overlay">
-        <Loader />
-        <Toaster closeButton={true} richColors={true} />
-      </div>
       </>
     );
   }

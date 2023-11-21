@@ -14,5 +14,7 @@ describe("Evolution Component", () => {
     const AltText = screen.getByLabelText("testing alt");
     // ASSERT
     expect(TitleText).toBeInTheDocument();
+    expect(ContentText).toBeInTheDocument();
+    expect(AltText).toBeInTheDocument();
   });
 });

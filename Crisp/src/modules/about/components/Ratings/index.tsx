@@ -13,7 +13,7 @@ const Ratings: React.FC<RatingsProps> = ({ rating }) => {
   }
 
   return (
-    <div className="ratings">
+    <div className="ratings" aria-label={`review star: ${rating}`}>
       {starIcons}
     </div>
   );

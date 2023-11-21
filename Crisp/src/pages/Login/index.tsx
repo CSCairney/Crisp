@@ -1,7 +1,5 @@
 import LoginPanel from "../../modules/login/components/LoginPanel";
 import RegisterPanel from "../../modules/login/components/RegisterPanel";
-import loginImage from "../../assets/login/login-image.jpeg";
-import registerImage from "../../assets/login/register-image.webp";
 import Seo from "../../modules/common/components/Seo";
 import "./styles.scss";
 import { useAppSelector } from "../../store";
@@ -15,8 +13,8 @@ const Login = () => {
     <>
       <Seo title="Crisp | Login" description="Login or register to access map data!" name="Github: CSCairney" type="website" />
       <div className='login-container'>
-        {activePanel === authenticationViewMode.LOGIN && <img src={loginImage} alt='login-background' className='login-container__background' />}
-        {activePanel === authenticationViewMode.REGISTER && <img src={registerImage} alt='register-background' className='login-container__background' />}
+        {activePanel === authenticationViewMode.LOGIN && <div className='login-container__background--left' />}
+        {activePanel === authenticationViewMode.REGISTER && <div className='login-container__background--right' />}
         <LoginPanel />
         <RegisterPanel />
       </div>

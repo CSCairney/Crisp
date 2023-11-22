@@ -11,6 +11,9 @@
     grid-template-rows: 2fr 5fr 2fr;
     grid-template-columns: 1fr;
     padding: 5%;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
     &__image{
         display: grid;
         grid-template-columns: 1fr;

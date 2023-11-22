@@ -13,8 +13,8 @@ const Contacts: React.FC<ContactProps> = () => {
         <div className="contact__overlay-wrapper">
             <div className="contact__sidebar-container"></div>
             <img className="contact__background" src={ContactBackground} alt="contact us background"/>
-            <PanelsContainer />
         </div>
+        <PanelsContainer />
     </div>
     )
 }

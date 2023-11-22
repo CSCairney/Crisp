@@ -20,7 +20,7 @@ const PanelToggle: React.FC<PanelToggleProps> = ({ type, content, isMobile }) =>
   if (isMobile)
     return (
       <div className='panel-toggle'>
-        <button className='panel-toggle__button' onClick={toggleHandler}>
+        <button className='panel-toggle__button box-shadow' onClick={toggleHandler}>
           {content}
         </button>
       </div>
@@ -28,7 +28,7 @@ const PanelToggle: React.FC<PanelToggleProps> = ({ type, content, isMobile }) =>
   else
     return (
       <div className='panel-toggle'>
-        <button className='panel-toggle__button' onClick={toggleHandler}>
+        <button className='panel-toggle__button box-shadow' onClick={toggleHandler}>
           {content}
         </button>
       </div>

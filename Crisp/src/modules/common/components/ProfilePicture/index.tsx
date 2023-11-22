@@ -9,7 +9,7 @@ type ProfilePictureProps = {
 
 const ProfilePicture:React.FC<ProfilePictureProps> = ({ image, alt, size }) => {
     return (
-            <img src={image} alt={alt} className={`profile-picture--${size}`} />
+            <img src={image} alt={alt} className={`profile-picture--${size} box-shadow`} />
     )
 }
 

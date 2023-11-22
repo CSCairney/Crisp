@@ -9,7 +9,7 @@ type AuthPanelContainerProps = {
 const AuthPanelContainer: React.FC<AuthPanelContainerProps> = ({ children }) => {
   return (
     <>
-      <div className="auth-panel-container">{children}</div>
+      <div className="auth-panel-container box-shadow">{children}</div>
     </>
   );
 };

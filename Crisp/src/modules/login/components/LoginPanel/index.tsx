@@ -45,7 +45,7 @@ const LoginPanel: React.FC = () => {
             <form className='login-panel__form' onSubmit={handleSubmit}>
               <input type='text' placeholder='Username' className='login-panel__input' value={username} onChange={(e) => setUsername(e.target.value)} />
               <input type='password' placeholder='Password' className='login-panel__input' value={password} onChange={(e) => setPassword(e.target.value)} />
-              <button type='submit' className='login-panel__submit'>
+              <button type='submit' className='login-panel__submit box-shadow'>
                 Login
               </button>
             </form>

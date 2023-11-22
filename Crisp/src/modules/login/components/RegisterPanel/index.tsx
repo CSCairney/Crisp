@@ -59,7 +59,7 @@ const RegisterPanel: React.FC = () => {
               <input type='number' placeholder='Age' className='register-panel__input' required value={age} onChange={(e) => setAge(parseInt(e.target.value, 10))} />
               <input type='email' placeholder='Email' className='register-panel__input' required value={email} onChange={(e) => setEmail(e.target.value)} />
               <input type='password' placeholder='Password' className='register-panel__input' required value={password} onChange={(e) => setPassword(e.target.value)} />
-              <button type='submit' className='register-panel__submit'>
+              <button type='submit' className='register-panel__submit box-shadow'>
                 Register
               </button>
             </form>

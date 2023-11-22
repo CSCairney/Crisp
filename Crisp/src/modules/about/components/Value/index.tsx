@@ -31,7 +31,7 @@ const Value:React.FC<ValueProps> = ({value, statement}) => {
 
     return (
         <div className="value">
-            <div className="value__icon-container">{valueHelper(value)}</div>
+            <div className="value__icon-container box-shadow">{valueHelper(value)}</div>
             <div className="value__content">
                 <h3 className="value__title" aria-label={`title for ${value}`}><strong>{value}</strong></h3>
                 <p className="value__statement">{statement}</p>

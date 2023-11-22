@@ -8,7 +8,6 @@ const ContactForm: React.FC = () => {
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
-    console.table(form);
     if (form.current) {
       emailjs
         .sendForm('service_uthzxrb', 'template_htbyf9b', form.current, 'G5YPNDGLjnSrVJIU2')

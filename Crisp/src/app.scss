@@ -1,14 +1,6 @@
 @use "src/styles/colors";
 
 .app{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
-    z-index: 1;
-    bottom: 0; /* Prevent overlap with on-screen buttons */
     display:grid;
     grid-template-columns: 1;
     grid-template-rows: 10% 90%;

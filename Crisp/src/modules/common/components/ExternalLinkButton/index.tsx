@@ -12,7 +12,7 @@ type ExternalLinkButtonProps = {
 const ExternalLinkButton:React.FC<ExternalLinkButtonProps> = ({ link, label, alt, size }) => {
 
   return (
-      <Link className={`external-link-button--${size}`} to={link} target="_blank" aria-label={alt} >{label}</Link>
+      <Link className={`external-link-button--${size} box-shadow`} to={link} target="_blank" aria-label={alt} >{label}</Link>
   );
 };
 

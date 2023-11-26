@@ -55,7 +55,7 @@ function App() {
   function LoginLayout() {
     return (
       <>
-        <div className="app">
+        <div className="app" style={{ height: windowDimensions.height, width: windowDimensions.width }}>
           <div className="app__header">
             <Navbar />
           </div>

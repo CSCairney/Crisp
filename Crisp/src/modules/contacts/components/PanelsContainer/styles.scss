@@ -1,27 +1,24 @@
 @use "src/styles/colors";
 
 .panels-container {
-    position: absolute;
-    left: 5%;
-    bottom: 20%;
+    position: relative;
     z-index: 10;
     display: grid;
+    place-self: center;
+    align-self: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    height: 60%;
-    width: 70%;
+    height: 90%;
+    min-width: min-content;
+    padding:30%;
+    width: 100%;
+    padding: 5%;
     gap: 38px;
 
     // Media query for 768 pixels or more
     @media screen and (max-width: 768px) {
-        left: 50%;
-        top: 50%;
-        bottom: 50%;
-        height: max-content;
-        width: 90%;
-        transform: translate(-50%, -50%);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1, 100%);
+        grid-template-columns: 100%;
 
         // Additional styles for the larger screen size go here
     }

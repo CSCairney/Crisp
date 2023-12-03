@@ -2,7 +2,7 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import { MainRoutes, SubRoutes } from "./routes";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Loader from "./modules/common/components/Loader";
 import Login from "./pages/Login";
 import Contact from "./pages/Contact";
@@ -13,11 +13,28 @@ import { Toaster } from "sonner";
 
 // TODO - Create a loader for APP suspense
 function App() {
+  const [windowDimensions, setWindowDimensions] = useState<{ width: number; height: number }>({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+
+  useEffect(() => {
+    console.log("windowDimensions", windowDimensions);
+    const handleResize = () => {
+      setWindowDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+  
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   function BasicLayout() {
     return (
       <>
-        <div className="app">
+        <div className="app" style={{ height: windowDimensions.height, width: windowDimensions.width }}>
           <div className="app__header">
             <Navbar />
           </div>

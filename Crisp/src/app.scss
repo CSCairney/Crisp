@@ -1,10 +1,6 @@
 @use "src/styles/colors";
 
 .app{
-    width: 100vw;
-    max-width: -webkit-fill-available;
-    height: 100vh;  
-    max-height: -webkit-fill-available;
     display:grid;
     grid-template-columns: 1;
     grid-template-rows: 10% 90%;

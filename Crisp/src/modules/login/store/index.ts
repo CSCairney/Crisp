@@ -5,7 +5,8 @@ export const {
     setUser,
     clearUser,
     setUserState,
-    setUserJWT
+    setUserJWT,
+    setCurrentLocation
 } = userSlice.actions;
 
 export default userSlice.reducer;

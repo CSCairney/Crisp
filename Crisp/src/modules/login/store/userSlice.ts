@@ -2,6 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { createInitialUserState } from "./userState";
 import { authenticationViewMode } from "../contants/login";
 import { userInfo, userState } from "../types/users";
+import { LatLng } from "leaflet";
 
 const teamSlice = createSlice({
     name: "userState",
@@ -32,6 +33,10 @@ const teamSlice = createSlice({
         },
         setUserJWT: (state, action: PayloadAction<string>) => {
             state.accessToken = action.payload;
+        },
+        setCurrentLocation: (state, action: PayloadAction<LatLng>) => {
+            console.log("setting current location", action.payload)
+            state.currentLocation = action.payload;
         }
     }
 })

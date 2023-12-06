@@ -1,3 +1,4 @@
+import { LatLng } from "leaflet";
 import { authenticationViewMode } from "../contants/login";
 
 export type userInfo = {
@@ -22,4 +23,5 @@ export type userState = {
     errorMessage: string,
     user: userInfo;
     accessToken: string;
+    currentLocation?: LatLng;
 }

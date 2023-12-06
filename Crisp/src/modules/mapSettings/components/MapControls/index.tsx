@@ -12,13 +12,12 @@ import { useDispatch } from "react-redux";
 import { setPanelOpenStatus, setSidebarOpenStatus } from "../../../common/store/index";
 import { panelTypes } from "../../../common/constants/menu";
 import { useMapEvents } from "react-leaflet";
-import { LatLng } from "leaflet";
+// import { LatLng } from "leaflet";
 import { toast } from "sonner";
 // import { setCurrentLocation } from "../../../login/store";
 
 const MapControls: React.FC = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [location, setLocation] = useState<LatLng>()
+  // const [location, setLocation] = useState<LatLng>()
   const isSidebarOpen = useAppSelector(selectSidebarStatus);
   const activePanel = useAppSelector(selectPanelStatus);
   const dispatch = useDispatch();
@@ -26,7 +25,7 @@ const MapControls: React.FC = () => {
   const map = useMapEvents({
     locationfound(e) {
       map.flyTo(e.latlng, 12);
-      setLocation(e.latlng);
+      // setLocation(e.latlng);
       toast.success("Here you are!");
     },
   });

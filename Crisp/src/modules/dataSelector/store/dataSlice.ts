@@ -7,6 +7,7 @@ const dataSlice = createSlice({
     initialState: createInitialDataState(),
     reducers: {
     setDataState: (state, action: PayloadAction<dataState>) => {
+        state.dataLayers = action.payload.dataLayers;
         state.tempSelectedLayers = action.payload.tempSelectedLayers;
         state.selectedLayers = action.payload.selectedLayers;
     },

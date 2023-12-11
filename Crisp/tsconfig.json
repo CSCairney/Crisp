@@ -26,16 +26,7 @@
     "allowUnusedLabels": false,
     "allowJs": false,
 
-    "baseUrl": "./",
-    "paths": {
-      "~/*": ["./src/*"],
-      "~/test/*": ["./test/*"],
-      "~/store": ["./src/store.ts"],
-      "~/modules/*": ["./src/modules/*"],
-      "~/pages/*": ["./src/pages/*"],
-      "~/styles/*": ["./src/styles/*"],
-      "~/assets/*": ["./src/assets/*"],
-    }
+    "baseUrl": "./"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

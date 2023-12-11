@@ -5,6 +5,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
     }
     &__links {
         display: grid;
@@ -21,6 +22,7 @@
         border: 1px solid transparent;
         border-radius: 10px;
         padding: 5px  10px;
+        font-size: 20px;
         &:hover {
             background-color: colors.$navigation-light-background-hover;
             color: colors.$navigation-light-text-hover;

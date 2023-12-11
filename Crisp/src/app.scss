@@ -5,7 +5,7 @@
     grid-template-columns: 1;
     grid-template-rows: 10% 90%;
     @media (max-width: 768px) {
-        grid-template-rows: 15% 85%;
+        grid-template-rows: 10% 90%;
     }
     &__header{
         position: relative;

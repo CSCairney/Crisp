@@ -32,3 +32,10 @@ export const selectAccessToken = createSelector(
     return userState.accessToken;
   }
 );
+
+export const selectCurrentLocation = createSelector(
+  [selectUserState],
+  (userState) => {
+    return userState.currentLocation;
+  }
+);

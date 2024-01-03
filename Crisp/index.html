@@ -2,7 +2,20 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <!-- SEO Tags -->
+  <meta name="description" content="Crisp Weather - A weather app that allows users to display complex database information." />
+  <meta name="keywords" content="weather, map, data, forecast, Crisp Weather, Crisp, data visualisation" />
+  <meta name="author" content="Charles Cairney" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9LQCDNBRF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-P9LQCDNBRF');
+  </script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
   <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -15,7 +28,6 @@
       emailjs.init("G5YPNDGLjnSrVJIU2");
     })();
   </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crisp Weather</title>
 </head>
 

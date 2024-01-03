@@ -1,5 +1,5 @@
-import { Value } from "../../modules/about/types/value";
-import { Values } from "../../modules/about/constants/values";
+import { Value } from "../../../modules/about/types/value";
+import { Values } from "../../../modules/about/constants/values";
 
 
 export const OurValuesContent: Value[] = [{

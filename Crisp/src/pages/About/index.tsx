@@ -1,13 +1,13 @@
 import Title from "../../modules/about/components/Title/index.tsx";
 import OurValues from "../../modules/about/components/OurValues/index.tsx";
-import { OurStoryContent } from "../../assets/about/information";
+import { OurStoryContent } from "../../assets/about/mockData/information.ts";
 import "./styles.scss";
 import Footer from "../../modules/common/components/Footer/index.tsx";
 import Seo from "../../modules/common/components/Seo/index.tsx";
 import Evolution from "../../modules/about/components/Evolution/index.tsx";
-import { evolutionContent } from "../../assets/about/information";
+import { evolutionContent } from "../../assets/about/mockData/information.ts";
 import Testimonals from "../../modules/about/components/Testimonals/index.tsx";
-import { testimonialsInformation } from "../../assets/about/testimonials.ts";
+import { testimonialsInformation } from "../../assets/about/mockData/testimonials.ts";
 import AboutHeader from "../../modules/about/components/AboutHeader/index.tsx";
 
 const About = () => {

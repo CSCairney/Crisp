@@ -1,4 +1,4 @@
-import { TestimonalDetails } from "../../modules/about/types/testimonials";
+import { TestimonalDetails } from "../../../modules/about/types/testimonials";
 
 export const testimonialsInformation:TestimonalDetails[] = [
     {

@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.scss";
-import { OurValuesContent } from "../../../../assets/about/values";
+import { OurValuesContent } from "../../../../assets/about/mockData/values";
 import Value from "../Value";
 
 const OurValues:React.FC = () => {

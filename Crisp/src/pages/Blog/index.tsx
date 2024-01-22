@@ -1,6 +1,6 @@
 import Seo from "../../modules/common/components/Seo/index.tsx";
 
-const Blog = () => {
+const BlogPage = () => {
     return (
         <>
             <Seo title="Crisp | Blog" description="Discuss with other Crisp users and leave comments with interesting data points!" name="Github: CSCairney" type="website" />
@@ -11,4 +11,4 @@ const Blog = () => {
     )
 }
 
-export default Blog;
+export default BlogPage;

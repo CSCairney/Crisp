@@ -6,7 +6,7 @@ import { Suspense, useEffect, useState } from "react";
 import Loader from "./modules/common/components/Loader";
 import Login from "./pages/Login";
 import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
+import BlogPage from "./pages/Blog";
 import Navbar from "./modules/common/components/Navbar";
 import "./app.scss";
 import { Toaster } from "sonner";
@@ -81,7 +81,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path={SubRoutes.ABOUT} element={<About />} />
             <Route path={SubRoutes.CONTACT} element={<Contact />} />
-            <Route path={SubRoutes.BLOG} element={<Blog />} />
+            <Route path={SubRoutes.BLOG} element={<BlogPage />} />
           </Route>
           <Route path={MainRoutes.LOGIN} element={<LoginLayout />}>
             <Route index element={<Login />} />

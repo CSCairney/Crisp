@@ -6,7 +6,7 @@ import { renderWithStore } from "../../../../../tests/helpers/render";
 import { MapContainer } from "react-leaflet";
 
 describe("SearchBar Component", () => {
-  test("should render", () => {
+  test("Render test - Component renders properly", () => {
     // Arrange
     renderWithStore(
       <BrowserRouter>
@@ -17,7 +17,7 @@ describe("SearchBar Component", () => {
     const searchInput = screen.getByPlaceholderText("Search");
     expect(searchInput).toBeInTheDocument();
   });
-  test("Input field can be changed and then deleted", () => {
+  test("State management test - input state is populated", () => {
     renderWithStore(
         <MapContainer>
             <BrowserRouter>
@@ -31,6 +31,19 @@ describe("SearchBar Component", () => {
     fireEvent.change(inputField, { target: { value: 'new value' } });
   
     expect(inputField.value).toBe('new value');
+  })
+  test("User interface test - Input field can be cleared", () => {
+    renderWithStore(
+        <MapContainer>
+            <BrowserRouter>
+                <SearchBar />    
+            </BrowserRouter>
+        </MapContainer>
+    )
+
+    const inputField = screen.getByRole('textbox') as HTMLInputElement;
+
+    fireEvent.change(inputField, { target: { value: 'new value' } });
   
     const clearButton = screen.getByRole('button', {
       name: /x/i,

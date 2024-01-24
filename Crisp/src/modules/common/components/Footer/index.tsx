@@ -20,16 +20,19 @@ const Footer: React.FC = () => {
           <FaFacebook
             className="footer__social-media-icon"
             onClick={() => socialMediaHandler("https://facebook.com")}
+            data-testid="facebook-link-testid"
           />
           <TbBackslash className="footer__social-media-icon-separator" />
           <FaInstagram
             className="footer__social-media-icon"
             onClick={() => socialMediaHandler("https://instagram.com")}
+            data-testid="instagram-link-testid"
           />
           <TbBackslash className="footer__social-media-icon-separator" />
           <FaTwitter
             className="footer__social-media-icon"
             onClick={() => socialMediaHandler("https://twitter.com")}
+            data-testid="twitter-link-testid"
           />
           <TbBackslash className="footer__social-media-icon-separator" />
           <FaLinkedin
@@ -37,11 +40,13 @@ const Footer: React.FC = () => {
             onClick={() =>
               socialMediaHandler("https://www.linkedin.com/in/charlescairney/")
             }
+            data-testid="linkedin-link-testid"
           />
           <TbBackslash className="footer__social-media-icon-separator" />
           <FaGithub
             className="footer__social-media-icon"
             onClick={() => socialMediaHandler("https://github.com/CSCairney")}
+            data-testid="github-link-testid"
           />
         </section>
         <section className="footer__interaction">

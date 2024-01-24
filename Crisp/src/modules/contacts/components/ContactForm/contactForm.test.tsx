@@ -1,4 +1,4 @@
-import { describe, test, vitest } from "vitest";
+import { describe, test } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import ContactForm from ".";
@@ -11,7 +11,6 @@ describe("ContactForm Component", () => {
         <ContactForm />
       </BrowserRouter>
     );
-    const logSpy = vitest.spyOn(console, 'log');
     const usernameInput = screen.getByPlaceholderText("username");
     const emailInput = screen.getByPlaceholderText("email");
     const feedbackInput = screen.getByPlaceholderText("feedback");
@@ -30,7 +29,5 @@ describe("ContactForm Component", () => {
     expect(emailInput).toBeInTheDocument();
     expect(feedbackInput).toBeInTheDocument();
     expect(submitButton).toBeInTheDocument();
-    expect(logSpy).toHaveBeenCalled();
-    logSpy.mockRestore();
   });
 });

@@ -12,7 +12,6 @@ describe("Card Component", () => {
     </BrowserRouter>
     );
 
-    screen.logTestingPlaygroundURL();
     const role = screen.getByRole('heading', {
         name: /tester/i
       });

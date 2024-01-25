@@ -5,6 +5,7 @@ import userReducer from "../src/modules/login/store";
 import mapReducer from "../src/modules/mapSettings/store";
 import overlayReducer from "../src/modules/common/store";
 import dataReducer from "../src/modules/dataSelector/store";
+import blogReducer from "../src/modules/blog/store"
 import { listenerMiddleware } from "./modules/common/services/listenersService";
 
 export function createStore(preloadedState = {}) {
@@ -16,6 +17,7 @@ export function createStore(preloadedState = {}) {
                 mapState: mapReducer,
                 overlayState: overlayReducer,
                 dataState: dataReducer,
+                blogState: blogReducer
             },
             middleware: (getDefaultMiddleware) =>
             getDefaultMiddleware().prepend(listenerMiddleware.middleware),

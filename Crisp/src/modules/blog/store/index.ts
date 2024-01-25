@@ -4,4 +4,4 @@ export const {
     setBlogState
 } = blogSlice.actions;
 
-blogSlice
+export default blogSlice.reducer

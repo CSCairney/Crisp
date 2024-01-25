@@ -10,6 +10,7 @@ import { selectSelectedLayers } from "../../modules/dataSelector/store/selectors
 import { fetchLayerNamesData } from "../../modules/dataSelector/store/actions/dataLayers";
 import { useEffect } from "react";
 import Seo from "../../modules/common/components/Seo";
+import { getPersistedBlogSettings } from "../../modules/blog/store/actions/persistence";
 
 const Home = () => {
   const accessToken = useAppSelector(selectAccessToken);
@@ -20,6 +21,7 @@ const Home = () => {
     dispatch(getPersistedUserSettings());
     dispatch(getPersistedMapSettings());
     dispatch(getPersistedDataSettings());
+    dispatch(getPersistedBlogSettings());
   }, [dispatch]);
 
   useEffect(() => {

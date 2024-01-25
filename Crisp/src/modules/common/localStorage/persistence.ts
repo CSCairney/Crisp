@@ -1,4 +1,4 @@
-import { userState } from "src/modules/login/types/users";
+import { userState } from "../../login/types/users";
 import { LocalStorageKeys } from "../constants/localStorage";
 import { DeepPartial } from "@reduxjs/toolkit";
 import { mapState } from "../../mapSettings/types/map";

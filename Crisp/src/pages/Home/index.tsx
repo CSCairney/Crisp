@@ -5,9 +5,10 @@ import { getPersistedUserSettings } from "../../modules/login/store/actions/logi
 import { getPersistedMapSettings } from "../../modules/mapSettings/store/actions/map";
 import { selectAccessToken } from "../../modules/login/store/selectors/login";
 import { fetchMarkerData } from "../../modules/mapSettings/store/actions/markers";
+import { fetchLayerNamesData } from "../../modules/dataSelector/store/actions/dataLayers";
+import { fetchBlogData } from "../../modules/blog/store/actions/fetchBlogs"
 import { getPersistedDataSettings } from "../../modules/dataSelector/store/actions/data";
 import { selectSelectedLayers } from "../../modules/dataSelector/store/selectors/dataSelectors";
-import { fetchLayerNamesData } from "../../modules/dataSelector/store/actions/dataLayers";
 import { useEffect } from "react";
 import Seo from "../../modules/common/components/Seo";
 import { getPersistedBlogSettings } from "../../modules/blog/store/actions/persistence";
@@ -24,6 +25,11 @@ const Home = () => {
     dispatch(getPersistedBlogSettings());
   }, [dispatch]);
 
+  useEffect(() => {
+    if (accessToken) {
+      dispatch(fetchBlogData(accessToken))
+    }
+  })
   useEffect(() => {
     if (accessToken) {
       dispatch(fetchLayerNamesData(accessToken));
